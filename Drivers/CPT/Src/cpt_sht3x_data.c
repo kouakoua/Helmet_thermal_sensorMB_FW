@@ -6,7 +6,7 @@
  *      Version: 1.0
  *      @brief: This file include utility functions for reading the sht3x data through
  *      i2c protocol. This file includes functionality to initialize the i2c communication and
- *      and also initialize the GPIOs, reading and writing data to the accelerometer.
+ *      and also initialize the GPIOs, reading and writing data to the temperature and humidity sensor.
  *
  */
 

@@ -25,8 +25,10 @@ uint8_t humidity[8];
 uint16_t temperature[8];
 uint8_t k_number;
 bool init;
-bool g_real;
-
+bool pass;
+bool fail;
+float tempfloat;
+float humdfloat;
 
 /**Takes care of the read data calculation to covert to temp and humidity values
  */
@@ -38,10 +40,12 @@ void read_data(sample_t * p_new_sample)
 
     m_sensor_val_f.temp = (m_sensor_val.temp * 0.00267)- 45;
     m_sensor_val_f.humd = (m_sensor_val.humd * 0.00153);
-    NRF_LOG_INFO("Temp " NRF_LOG_FLOAT_MARKER "\r\n", NRF_LOG_FLOAT(m_sensor_val_f.temp));
-    NRF_LOG_INFO("Humd " NRF_LOG_FLOAT_MARKER "\r\n", NRF_LOG_FLOAT(m_sensor_val_f.humd));
-    temperature[k_number]= (uint16_t)(m_sensor_val_f.temp*10);
-    humidity[k_number]=(uint8_t) m_sensor_val_f.humd;
+  //  NRF_LOG_INFO("Temp " NRF_LOG_FLOAT_MARKER "\r\n", NRF_LOG_FLOAT(m_sensor_val_f.temp));
+  //  NRF_LOG_INFO("Humd " NRF_LOG_FLOAT_MARKER "\r\n", NRF_LOG_FLOAT(m_sensor_val_f.humd));
+    tempfloat = m_sensor_val_f.temp;
+    humdfloat = m_sensor_val_f.humd;
+   // pass =true;
+
 }
 
 
@@ -64,12 +68,13 @@ void twi_handler(nrf_drv_twi_evt_t const * p_event, void * p_context)
             	 err_code = nrf_drv_twi_rx(&m_twi_sht3x, ADDR_A, (uint8_t*)&m_sample, sizeof(m_sample));
             	 NRF_LOG_INFO("ERR: %d\n",err_code);
           //  APP_ERROR_CHECK(err_code);
-            	 g_real = true;
+
             }
             else if ((p_event->xfer_desc.type == NRF_DRV_TWI_XFER_TX)&&(init==true))
             {
             	 m_xfer_done = true;
-            	 g_real = true;
+            	// g_real = true;
+            	 pass =true;
             }
             else
             {
@@ -97,9 +102,7 @@ void twi_handler(nrf_drv_twi_evt_t const * p_event, void * p_context)
         case NRF_DRV_TWI_EVT_ADDRESS_NACK:
         {
           NRF_LOG_INFO("Error Addr ACK");
-          	  temperature[k_number]= 0;
-          	  humidity[k_number]=0;
-          	g_real = false;
+          fail =true;
         }break;
         
         case NRF_DRV_TWI_EVT_DATA_NACK:

@@ -35,7 +35,8 @@
 #define SHT_CMD_NOSTRETCH_LSB_MED   0x0B
 #define SHT_CMD_NOSTRETCH_LSB_LOW   0x16
 
-
+extern bool pass;
+extern bool fail;
 extern uint8_t humidity[8];
 extern uint16_t temperature[8];
 extern uint8_t k_number;
@@ -54,6 +55,9 @@ static volatile bool m_set_mode_done = false;
 
 /* TWI instance. */
 static const nrf_drv_twi_t m_twi_sht3x = NRF_DRV_TWI_INSTANCE(TWI_INSTANCE_ID);
+
+extern float tempfloat;
+extern float humdfloat;
 
 typedef struct
 {

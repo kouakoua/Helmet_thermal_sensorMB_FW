@@ -1158,21 +1158,21 @@ int ble_init(void)
     for (;;)
     {
 //        NRF_LOG_INFO("Heart Rate Sensor Start4!\r\n");
- //   	nrf_delay_ms(700);
+    //	nrf_delay_ms(1200);
     	bsp_ReadSensor0read();
-    	//nrf_delay_ms(500);
+    //	nrf_delay_ms(1500);
     	bsp_ReadSensor1read();
-//    	nrf_delay_ms(700);
+    //	nrf_delay_ms(1700);
     	bsp_ReadSensor2read();
-    	//nrf_delay_ms(500);
+    //	nrf_delay_ms(1500);
     	bsp_ReadSensor3read();
-        //nrf_delay_ms(500);
+    //    nrf_delay_ms(1500);
         bsp_ReadSensor4read();
-        //nrf_delay_ms(500);
+   //     nrf_delay_ms(1500);
         bsp_ReadSensor5read();
-     //   nrf_delay_ms(700);
+   //     nrf_delay_ms(1700);
         bsp_ReadSensor6read();
-     //   nrf_delay_ms(700);
+   //     nrf_delay_ms(1700);
         bsp_ReadSensor7read();
         if (NRF_LOG_PROCESS() == false)
         {

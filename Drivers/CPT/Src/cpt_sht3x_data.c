@@ -62,12 +62,10 @@ void twi_handler(nrf_drv_twi_evt_t const * p_event, void * p_context)
             if ((p_event->xfer_desc.type == NRF_DRV_TWI_XFER_TX)&&(init==false))
             {
             	m_xfer_done = false;
-            	// m_xfer_done = true;
-            	// NRF_LOG_INFO("I2C START");
-            	nrf_delay_ms(20);
+                 nrf_delay_ms(20);
             	 err_code = nrf_drv_twi_rx(&m_twi_sht3x, ADDR_A, (uint8_t*)&m_sample, sizeof(m_sample));
             	 NRF_LOG_INFO("ERR: %d\n",err_code);
-          //  APP_ERROR_CHECK(err_code);
+
 
             }
             else if ((p_event->xfer_desc.type == NRF_DRV_TWI_XFER_TX)&&(init==true))
@@ -88,6 +86,7 @@ void twi_handler(nrf_drv_twi_evt_t const * p_event, void * p_context)
                                break;
                            case NRF_DRV_TWI_XFER_RX:
                         	   m_xfer_done = true;
+                        	//   NRF_LOG_INFO("Received Sensor Data");
                                break;
                            case NRF_DRV_TWI_XFER_TXRX:
                         	   m_xfer_done = true;
@@ -165,8 +164,26 @@ void sht3x_set_SENSOR(uint8_t Address, uint8_t MSB)
 {
   ret_code_t err_code;
   init =true;
-  err_code = nrf_drv_twi_tx(&m_twi_sht3x, Address, MSB, 1, false);
+  static uint8_t reg[1];
+  reg[0] =MSB;
+  err_code = nrf_drv_twi_tx(&m_twi_sht3x, Address, reg, sizeof(reg), false);
   APP_ERROR_CHECK(err_code);
   m_xfer_done = false;
   NRF_LOG_INFO("tRANSERRORint: %d\n",err_code);
+}
+
+
+/**
+ * @brief MUX channel selector
+ * Just the usual way. Select the I2c channel.
+ */
+uint8_t control_reg;
+void sht3x_read_Channel(void)
+{
+  ret_code_t err_code;
+  init =true;
+  err_code = nrf_drv_twi_rx(&m_twi_sht3x, MUX_ADDRESS, (uint8_t*)&control_reg, sizeof(control_reg));
+  APP_ERROR_CHECK(err_code);
+  m_xfer_done = false;
+  NRF_LOG_INFO("control_reg: %d\n",control_reg);
 }

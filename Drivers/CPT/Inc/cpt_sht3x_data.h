@@ -41,6 +41,9 @@ extern uint8_t humidity[8];
 extern uint16_t temperature[8];
 extern uint8_t k_number;
 extern bool g_real;
+
+void sht3x_read_Channel(void);
+
 //TWI parametrs
 /* TWI instance ID. */
 #define TWI_INSTANCE_ID          0

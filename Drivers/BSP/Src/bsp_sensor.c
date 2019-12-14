@@ -37,7 +37,9 @@ void bsp_ReadSensor0read(void)
 	pass = false;
 	fail = false;
 	nrf_delay_ms(20);
-	sht3x_set_SENSOR(MUX_ADDRESS, 77);
+	sht3x_set_SENSOR(MUX_ADDRESS, 0);
+	nrf_delay_ms(20);
+	sht3x_set_SENSOR(MUX_ADDRESS, 1);
 	nrf_delay_ms(20);
 	k_number=0;
 	sht3x_set_mode(ADDR_A, SHT_CMD_STRETCH_MSB, SHT_CMD_STRETCH_LSB_HIGH);
@@ -51,6 +53,8 @@ void bsp_ReadSensor0read(void)
 		temperature[k_number]=0;
 		humidity[k_number]=0;
 	}
+	NRF_LOG_INFO("Temp %d\n",temperature[k_number]);
+	NRF_LOG_INFO("Humd %d\n",humidity[k_number]);
 }
 
 /**
@@ -64,7 +68,7 @@ void bsp_ReadSensor1read(void)
 	pass = false;
 	fail = false;
 	nrf_delay_ms(20);
-	sht3x_set_SENSOR(MUX_ADDRESS,177);
+	sht3x_set_SENSOR(MUX_ADDRESS,2);
 	nrf_delay_ms(20);
 	k_number=1;
 	sht3x_set_mode(ADDR_A, SHT_CMD_STRETCH_MSB, SHT_CMD_STRETCH_LSB_HIGH);
@@ -95,7 +99,7 @@ void bsp_ReadSensor2read(void)
 	pass = false;
 	fail = false;
 	nrf_delay_ms(20);
-	sht3x_set_SENSOR(MUX_ADDRESS,202);
+	sht3x_set_SENSOR(MUX_ADDRESS,4);
 	nrf_delay_ms(20);
 	k_number=2;
 	sht3x_set_mode(ADDR_A, SHT_CMD_STRETCH_MSB, SHT_CMD_STRETCH_LSB_HIGH);
@@ -126,7 +130,7 @@ void bsp_ReadSensor3read(void)
 	pass = false;
 	fail = false;
 	nrf_delay_ms(20);
-	sht3x_set_SENSOR(MUX_ADDRESS,216);
+	sht3x_set_SENSOR(MUX_ADDRESS,8);
 	nrf_delay_ms(20);
 	k_number=3;
 	sht3x_set_mode(ADDR_A, SHT_CMD_STRETCH_MSB, SHT_CMD_STRETCH_LSB_HIGH);
@@ -158,10 +162,9 @@ void bsp_ReadSensor4read(void)
 	pass = false;
 	fail = false;
 	nrf_delay_ms(20);
-	sht3x_set_SENSOR(MUX_ADDRESS,250);
+	sht3x_set_SENSOR(MUX_ADDRESS,16);
 	nrf_delay_ms(20);
-	sht3x_set_SENSOR(MUX_ADDRESS,184);
-	nrf_delay_ms(20);
+
 	k_number=4;
 	sht3x_set_mode(ADDR_A, SHT_CMD_STRETCH_MSB, SHT_CMD_STRETCH_LSB_HIGH);
 	if((pass ==true)&&(fail ==false))
@@ -194,7 +197,7 @@ void bsp_ReadSensor5read(void)
 	pass = false;
 	fail = false;
 	nrf_delay_ms(20);
-	sht3x_set_SENSOR(MUX_ADDRESS,249);
+	sht3x_set_SENSOR(MUX_ADDRESS,32);
 	nrf_delay_ms(20);
 	k_number=5;
 	sht3x_set_mode(ADDR_A, SHT_CMD_STRETCH_MSB, SHT_CMD_STRETCH_LSB_HIGH);
@@ -226,9 +229,7 @@ void bsp_ReadSensor6read(void)
 	pass = false;
 	fail = false;
 	nrf_delay_ms(20);
-	sht3x_set_SENSOR(MUX_ADDRESS,00);
-	nrf_delay_ms(20);
-	sht3x_set_SENSOR(MUX_ADDRESS,132);
+	sht3x_set_SENSOR(MUX_ADDRESS,64);
 	nrf_delay_ms(20);
 	k_number=6;
 	sht3x_set_mode(ADDR_A, SHT_CMD_STRETCH_MSB, SHT_CMD_STRETCH_LSB_HIGH);
@@ -259,7 +260,7 @@ void bsp_ReadSensor7read(void)
 	pass = false;
 	fail = false;
 	nrf_delay_ms(20);
-	sht3x_set_SENSOR(MUX_ADDRESS,238);
+	sht3x_set_SENSOR(MUX_ADDRESS,128);
 	nrf_delay_ms(20);
 	k_number=7;
 	sht3x_set_mode(ADDR_A, SHT_CMD_STRETCH_MSB, SHT_CMD_STRETCH_LSB_HIGH);

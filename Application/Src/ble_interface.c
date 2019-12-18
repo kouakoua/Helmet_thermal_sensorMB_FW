@@ -92,7 +92,7 @@
 #define DEVICE_NAME                      "Helmet_Sensors"                                /**< Name of device. Will be included in the advertising data. */
 #define MANUFACTURER_NAME                "GT SILICON"                       /**< Manufacturer. Will be passed to Device Information Service. */
 #define APP_ADV_INTERVAL                 64                                         /**< The advertising interval (in units of 0.625 ms. This value corresponds to 187.5 ms). */
-#define APP_ADV_TIMEOUT_IN_SECONDS       180                                         /**< The advertising timeout in units of seconds. */
+#define APP_ADV_TIMEOUT_IN_SECONDS       0                                         /**< The advertising timeout in units of seconds. */
 
 #define APP_TIMER_PRESCALER              0                                           /**< Value of the RTC1 PRESCALER register. */
 #define APP_TIMER_OP_QUEUE_SIZE          4                                           /**< Size of timer operation queues. */
@@ -106,7 +106,7 @@
 
 #define SENSOR_CONTACT_DETECTED_INTERVAL APP_TIMER_TICKS(500, APP_TIMER_PRESCALER)  /**< Sensor Contact Detected toggle interval (ticks). */
 
-#define MIN_CONN_INTERVAL                MSEC_TO_UNITS(20, UNIT_1_25_MS)            /**< Minimum acceptable connection interval (0.4 seconds). */
+#define MIN_CONN_INTERVAL                MSEC_TO_UNITS(15, UNIT_1_25_MS)            /**< Minimum acceptable connection interval (0.4 seconds). */
 #define MAX_CONN_INTERVAL                MSEC_TO_UNITS(70, UNIT_1_25_MS)            /**< Maximum acceptable connection interval (0.65 second). */
 #define SLAVE_LATENCY                    0                                           /**< Slave latency. */
 #define CONN_SUP_TIMEOUT                 MSEC_TO_UNITS(4000, UNIT_10_MS)             /**< Connection supervisory timeout (4 seconds). */

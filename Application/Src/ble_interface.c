@@ -73,6 +73,7 @@
 #include "bsp_btn_ble.h"
 #include "peer_manager.h"
 #include "fds.h"
+#include "cpt_btn.h"
 #include "fstorage.h"
 #include "nrf_ble_gatt.h"
 #include "ble_conn_state.h"
@@ -1120,6 +1121,34 @@ void gatt_init(void)
     APP_ERROR_CHECK(err_code);
 }
 
+void ble_on(void)
+{
+
+
+
+	    //buttons_leds_init(&erase_bonds);
+	    ble_stack_init();
+	    //peer_manager_init(erase_bonds);
+	    //if (erase_bonds == true)
+	    {
+	        NRF_LOG_INFO("Bonds erased!\r\n");
+	    }
+
+	    gap_params_init();
+	    advertising_init();
+	    gatt_init();
+	    services_init();
+	   // sensor_simulator_init();
+	    conn_params_init();
+	 //   bsp_Sensor0init();
+	    // Start execution.
+	//    NRF_LOG_INFO("Heart Rate Sensor Start2!\r\n");
+
+	    advertising_start();
+	    NRF_LOG_INFO("BLE_START!\r\n");
+}
+
+
 
 /**@brief Function for application main entry.
  */
@@ -1130,34 +1159,18 @@ int ble_init(void)
     // Initialize.
    // err_code = NRF_LOG_INIT(NULL);
     //APP_ERROR_CHECK(err_code);
-    NRF_LOG_INFO("STARTING\r\n");
-    NRF_LOG_INFO("Heart Rate Sensor Start!\r\n");
-    bsp_Sensor0init();
     timers_init();
-    //buttons_leds_init(&erase_bonds);
-    ble_stack_init();
-    //peer_manager_init(erase_bonds);
-    //if (erase_bonds == true)
-    {
-        NRF_LOG_INFO("Bonds erased!\r\n");
-    }
-
-    gap_params_init();
-    advertising_init();
-    gatt_init();
-    services_init();
-   // sensor_simulator_init();
-    conn_params_init();
- //   bsp_Sensor0init();
-    // Start execution.
-    NRF_LOG_INFO("Heart Rate Sensor Start2!\r\n");
-    application_timers_start();
-    advertising_start();
-    NRF_LOG_INFO("Heart Rate Sensor Start3!\r\n");
+    NRF_LOG_INFO("STARTING\r\n");
+    NRF_LOG_INFO("Start!\r\n");
+    //ble_on();
     // Enter main loop.
+    bsp_Sensor0init();
+    application_timers_start();
     for (;;)
     {
 //        NRF_LOG_INFO("Heart Rate Sensor Start4!\r\n");
+    //	if(start_acc ==true)
+    //	{
     //	nrf_delay_ms(1200);
     	bsp_ReadSensor0read();
     //	nrf_delay_ms(1500);
@@ -1177,8 +1190,11 @@ int ble_init(void)
         if (NRF_LOG_PROCESS() == false)
         {
            // NRF_LOG_INFO("\r\n");
-            power_manage();
+          //  power_manage();
         }
+    //	}
+
+
 
     }
 }

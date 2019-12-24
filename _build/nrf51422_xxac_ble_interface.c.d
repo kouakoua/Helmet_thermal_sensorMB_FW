@@ -100,7 +100,9 @@ _build/nrf51422_xxac_ble_interface.c.o: Application/Src/ble_interface.c \
  components/libraries/util/nrf_assert.h \
  components/ble/peer_manager/peer_database.h \
  components/ble/peer_manager/peer_manager_internal.h \
- components/libraries/fds/fds.h components/libraries/fstorage/fstorage.h \
+ components/libraries/fds/fds.h Drivers/CPT/Inc/cpt_btn.h \
+ Drivers/HAL/Inc/nrf_drv_gpiote.h components/drivers_nrf/hal/nrf_gpiote.h \
+ components/libraries/fstorage/fstorage.h \
  components/libraries/experimental_section_vars/section_vars.h \
  components/ble/common/ble_conn_state.h \
  components/libraries/util/sdk_mapped_flags.h \
@@ -332,6 +334,12 @@ components/ble/peer_manager/peer_database.h:
 components/ble/peer_manager/peer_manager_internal.h:
 
 components/libraries/fds/fds.h:
+
+Drivers/CPT/Inc/cpt_btn.h:
+
+Drivers/HAL/Inc/nrf_drv_gpiote.h:
+
+components/drivers_nrf/hal/nrf_gpiote.h:
 
 components/libraries/fstorage/fstorage.h:
 

@@ -33,7 +33,9 @@ SRC_FILES += \
    Drivers/HAL/Src/nrf_drv_uart.c \
    Drivers/HAL/Src/hal_drv_twi.c \
    Drivers/CPT/Src/cpt_sht3x_data.c \
+   Drivers/CPT/Src/cpt_btn.c \
    Drivers/BSP/Src/bsp_sensor.c \
+   Drivers/BSP/Src/bsp_btn.c \
    components/libraries/bsp/bsp.c \
    components/libraries/bsp/bsp_btn_ble.c \
    components/libraries/bsp/bsp_nfc.c \

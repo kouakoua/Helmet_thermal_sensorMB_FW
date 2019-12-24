@@ -9,10 +9,14 @@
 #define APPLICATION_INC_BLE_INTERFACE_H_
 #include <stdint.h>
 #include <string.h>
+#include <stdbool.h>
 
 
 
 extern volatile int updated_hrm_value;
+void ble_on(void);
+
+//extern bool start_acc;
 extern uint8_t humidity[8];
 extern  uint16_t temperature[8];
 //extern uint32_t testval;

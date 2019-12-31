@@ -15,6 +15,7 @@
 
 #define BTN_INTERRUPT_ON_OFF	29
 extern bool start_acc;
+extern bool g_state;
 extern uint32_t cpt_gpio_BtnInit(uint8_t gpioIntPin);
 
 

@@ -14,31 +14,43 @@
 #include "nrf_nvic.h"
 bool start_ble;
 bool start_acc;
+bool g_state;
+
 void in_pin_BtnHandler(nrf_drv_gpiote_pin_t pin, nrf_gpiote_polarity_t action)
 {
 	//Event handler for the GPIOs when any gpio toggle is detected
     switch(action)
     {
-        case NRF_GPIOTE_POLARITY_LOTOHI:
-        	//NRF_LOG_INFO("btn");
+        case NRF_GPIOTE_POLARITY_TOGGLE:
+        	NRF_LOG_INFO("btn");
+        	if(g_state ==false)
+        	   g_state =true;
+        	  else
+        	   g_state = false;
+
         	if(pin == BTN_INTERRUPT_ON_OFF)
         	{
-        		if(start_ble==true)
+
+        		if (timer>3)
         		{
+        			if(start_ble==true)
+        			{
         			//start_ble=false;
         			start_ble=false;
-        		}
-        		else
-        		start_ble = true;
-        		if(start_ble==true)
-        		{
-        			start_acc=true;
-        			ble_on();
-        		}
-        		else
-        		{
+        			}
+        			else
+        				start_ble = true;
+        			if(start_ble==true)
+        			{
+        				start_acc=true;
+        				ble_on();
+        			}
+        			else
+        			{
         			//start_acc =false;
         			sd_nvic_SystemReset();
+        			}
+        			//g_state=false;
         		}
         	}
 
@@ -68,7 +80,7 @@ uint32_t cpt_gpio_BtnInit(uint8_t gpioIntPin)
 
     APP_ERROR_CHECK(errCode);
     // Choose high Sense setting for reading the  interrupt
-    nrf_drv_gpiote_in_config_t in_config =  	GPIOTE_CONFIG_IN_SENSE_LOTOHI(false);
+    nrf_drv_gpiote_in_config_t in_config =  	GPIOTE_CONFIG_IN_SENSE_TOGGLE(true);
    	in_config.pull = NRF_GPIO_PIN_PULLDOWN;
     errCode = nrf_drv_gpiote_in_init(gpioIntPin, &in_config, in_pin_BtnHandler);// Config and event on initialization
   //  NRF_LOG_INFO("err %u\n",errCode);

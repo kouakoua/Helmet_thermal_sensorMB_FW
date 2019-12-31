@@ -150,7 +150,7 @@ static uint32_t cnt = 0;
 static int dataPacket = 0;
 uint32_t        err_code;
 static uint16_t        heart_rate;
-
+uint16_t timer;
 static int i;
 static uint16_t CheckSum = 0;
 static ble_uuid_t m_adv_uuids[] = {{BLE_UUID_HEART_RATE_SERVICE, BLE_UUID_TYPE_BLE},
@@ -1168,6 +1168,7 @@ int ble_init(void)
     application_timers_start();
     for (;;)
     {
+
 //        NRF_LOG_INFO("Heart Rate Sensor Start4!\r\n");
     //	if(start_acc ==true)
     //	{
@@ -1175,24 +1176,33 @@ int ble_init(void)
     	bsp_ReadSensor0read();
     //	nrf_delay_ms(1500);
     	bsp_ReadSensor1read();
-    //	nrf_delay_ms(1700);
+//    //	nrf_delay_ms(1700);
     	bsp_ReadSensor2read();
-    //	nrf_delay_ms(1500);
+//    //	nrf_delay_ms(1500);
     	bsp_ReadSensor3read();
-    //    nrf_delay_ms(1500);
+//    //    nrf_delay_ms(1500);
         bsp_ReadSensor4read();
-   //     nrf_delay_ms(1500);
+//   //     nrf_delay_ms(1500);
         bsp_ReadSensor5read();
-   //     nrf_delay_ms(1700);
+//   //     nrf_delay_ms(1700);
         bsp_ReadSensor6read();
-   //     nrf_delay_ms(1700);
+//   //     nrf_delay_ms(1700);
         bsp_ReadSensor7read();
-        if (NRF_LOG_PROCESS() == false)
-        {
-           // NRF_LOG_INFO("\r\n");
-          //  power_manage();
-        }
+
     //	}
+    	if(g_state ==true)
+        	NRF_LOG_INFO("state %d\n ",g_state);
+        	if(g_state ==true)
+        	timer++;
+        	else
+        	timer=0;
+        	if(timer>0)
+    		NRF_LOG_INFO("timer %d\n ",timer);
+         //   if (NRF_LOG_PROCESS() == false)
+          //  {
+               // NRF_LOG_INFO("\r\n");
+              //  power_manage();
+         //   }
 
 
 

@@ -19,6 +19,8 @@ void ble_on(void);
 //extern bool start_acc;
 extern uint8_t humidity[8];
 extern  uint16_t temperature[8];
+extern uint16_t timer;
+extern bool g_state;
 //extern uint32_t testval;
 
 /**@brief Function for the Power manager.

@@ -33,7 +33,7 @@ void bsp_Sensor0init(void)
  */
 void bsp_ReadSensor0read(void)
 {
-	NRF_LOG_INFO("Sensor---------------------------------- 0\n");
+	//NRF_LOG_INFO("Sensor---------------------------------- 0\n");
 	pass = false;
 	fail = false;
 	nrf_delay_ms(20);
@@ -53,8 +53,8 @@ void bsp_ReadSensor0read(void)
 		temperature[k_number]=0;
 		humidity[k_number]=0;
 	}
-	NRF_LOG_INFO("Temp %d\n",temperature[k_number]);
-	NRF_LOG_INFO("Humd %d\n",humidity[k_number]);
+//	NRF_LOG_INFO("Temp %d\n",temperature[k_number]);
+//	NRF_LOG_INFO("Humd %d\n",humidity[k_number]);
 }
 
 /**
@@ -64,7 +64,7 @@ void bsp_ReadSensor0read(void)
 void bsp_ReadSensor1read(void)
 {
 	// The SCL and the SDA pins are set .
-	NRF_LOG_INFO("Sensor----------------------------------- 1\n");
+//	NRF_LOG_INFO("Sensor----------------------------------- 1\n");
 	pass = false;
 	fail = false;
 	nrf_delay_ms(20);
@@ -82,8 +82,8 @@ void bsp_ReadSensor1read(void)
 			temperature[k_number]=0;
 			humidity[k_number]=0;
 		}
-	NRF_LOG_INFO("Temp %d\n",temperature[k_number]);
-	NRF_LOG_INFO("Humd %d\n",humidity[k_number]);
+//	NRF_LOG_INFO("Temp %d\n",temperature[k_number]);
+//	NRF_LOG_INFO("Humd %d\n",humidity[k_number]);
 
 }
 
@@ -95,7 +95,7 @@ void bsp_ReadSensor1read(void)
 void bsp_ReadSensor2read(void)
 {
 	// The SCL and the SDA pins are set .
-	NRF_LOG_INFO("Sensor----------------------------------- 2\n");
+//	NRF_LOG_INFO("Sensor----------------------------------- 2\n");
 	pass = false;
 	fail = false;
 	nrf_delay_ms(20);
@@ -113,8 +113,8 @@ void bsp_ReadSensor2read(void)
 		temperature[k_number]=0;
 		humidity[k_number]=0;
 	}
-	NRF_LOG_INFO("Temp %d\n",temperature[k_number]);
-	NRF_LOG_INFO("Humd %d\n",humidity[k_number]);
+//	NRF_LOG_INFO("Temp %d\n",temperature[k_number]);
+//	NRF_LOG_INFO("Humd %d\n",humidity[k_number]);
 
 }
 
@@ -126,7 +126,7 @@ void bsp_ReadSensor2read(void)
 void bsp_ReadSensor3read(void)
 {
 	// The SCL and the SDA pins are set .
-	NRF_LOG_INFO("Sensor------------------------------------ 3\n");
+//	NRF_LOG_INFO("Sensor------------------------------------ 3\n");
 	pass = false;
 	fail = false;
 	nrf_delay_ms(20);
@@ -144,8 +144,8 @@ void bsp_ReadSensor3read(void)
 		temperature[k_number]=0;
 		humidity[k_number]=0;
 	}
-	NRF_LOG_INFO("Temp %d\n",temperature[k_number]);
-	NRF_LOG_INFO("Humd %d\n",humidity[k_number]);
+//	NRF_LOG_INFO("Temp %d\n",temperature[k_number]);
+//	NRF_LOG_INFO("Humd %d\n",humidity[k_number]);
 
 }
 
@@ -158,7 +158,7 @@ void bsp_ReadSensor3read(void)
 
 void bsp_ReadSensor4read(void)
 {
-	NRF_LOG_INFO("Sensor------------------------------------- 4\n");
+//	NRF_LOG_INFO("Sensor------------------------------------- 4\n");
 	pass = false;
 	fail = false;
 	nrf_delay_ms(20);
@@ -179,8 +179,8 @@ void bsp_ReadSensor4read(void)
 		humidity[k_number]=0;
 	}
 
-	NRF_LOG_INFO("Temp %d\n",temperature[k_number]);
-	NRF_LOG_INFO("Humd %d\n",humidity[k_number]);
+//	NRF_LOG_INFO("Temp %d\n",temperature[k_number]);
+//	NRF_LOG_INFO("Humd %d\n",humidity[k_number]);
 }
 
 
@@ -193,7 +193,7 @@ void bsp_ReadSensor4read(void)
 void bsp_ReadSensor5read(void)
 {
 	// The SCL and the SDA pins are set .
-	NRF_LOG_INFO("Sensor---------------------------------------5\n");
+//	NRF_LOG_INFO("Sensor---------------------------------------5\n");
 	pass = false;
 	fail = false;
 	nrf_delay_ms(20);
@@ -211,8 +211,8 @@ void bsp_ReadSensor5read(void)
 		temperature[k_number]=0;
 		humidity[k_number]=0;
 	}
-	NRF_LOG_INFO("Temp %d\n",temperature[k_number]);
-	NRF_LOG_INFO("Humd %d\n",humidity[k_number]);
+//	NRF_LOG_INFO("Temp %d\n",temperature[k_number]);
+//	NRF_LOG_INFO("Humd %d\n",humidity[k_number]);
 }
 
 
@@ -225,7 +225,7 @@ void bsp_ReadSensor5read(void)
 void bsp_ReadSensor6read(void)
 {
 	// The SCL and the SDA pins are set .
-	NRF_LOG_INFO("Sensor----------------------------------- 6\n");
+//	NRF_LOG_INFO("Sensor----------------------------------- 6\n");
 	pass = false;
 	fail = false;
 	nrf_delay_ms(20);
@@ -243,8 +243,8 @@ void bsp_ReadSensor6read(void)
 		temperature[k_number]=0;
 		humidity[k_number]=0;
 	}
-	NRF_LOG_INFO("Temp %d\n",temperature[k_number]);
-	NRF_LOG_INFO("Humd %d\n",humidity[k_number]);
+//	NRF_LOG_INFO("Temp %d\n",temperature[k_number]);
+//	NRF_LOG_INFO("Humd %d\n",humidity[k_number]);
 }
 
 /**
@@ -256,7 +256,7 @@ void bsp_ReadSensor6read(void)
 void bsp_ReadSensor7read(void)
 {
 	// The SCL and the SDA pins are set .
-	NRF_LOG_INFO("Sensor----------------------------------- 7\n");
+//	NRF_LOG_INFO("Sensor----------------------------------- 7\n");
 	pass = false;
 	fail = false;
 	nrf_delay_ms(20);
@@ -274,8 +274,8 @@ void bsp_ReadSensor7read(void)
 			temperature[k_number]=0;
 			humidity[k_number]=0;
 		}
-	NRF_LOG_INFO("Temp %d\n",temperature[k_number]);
-	NRF_LOG_INFO("Humd %d\n",humidity[k_number]);
+//	NRF_LOG_INFO("Temp %d\n",temperature[k_number]);
+//	NRF_LOG_INFO("Humd %d\n",humidity[k_number]);
 
 }
 

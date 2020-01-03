@@ -1187,14 +1187,14 @@ int ble_init(void)
         bsp_ReadSensor7read();
 
     //	}
-    //	if(g_state ==true)
-        //	NRF_LOG_INFO("state %d\n ",g_state);
+    	if(g_state ==true)
+        	NRF_LOG_INFO("state %d\n ",g_state);
         	if(g_state ==true)
         	timer++;
         	else
         	timer=0;
-        //	if(timer>0)
-    	//	NRF_LOG_INFO("timer %d\n ",timer);
+        	if(timer>0)
+    		NRF_LOG_INFO("timer %d\n ",timer);
          //   if (NRF_LOG_PROCESS() == false)
           //  {
                // NRF_LOG_INFO("\r\n");

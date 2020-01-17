@@ -17,3 +17,16 @@ int main(void){
 	ble_init();
 	//bsp_gpio_IntInit();
 }
+
+
+//int main()
+//{
+//    while(true)
+//    {
+//        // Wait for an event.
+//        __WFE();
+//        // Clear the internal event register.
+//        __SEV();
+//        __WFE();
+//    }
+//}

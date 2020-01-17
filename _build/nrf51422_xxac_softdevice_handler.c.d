@@ -70,9 +70,7 @@ _build/nrf51422_xxac_softdevice_handler.c.o: \
  components/softdevice/s130/headers/nrf_nvic.h \
  components/libraries/util/sdk_common.h \
  components/libraries/util/sdk_os.h components/libraries/util/app_util.h \
- components/libraries/util/sdk_macros.h Drivers/HAL/Inc/nrf_drv_clock.h \
- components/libraries/util/sdk_errors.h \
- components/drivers_nrf/hal/nrf_clock.h Drivers/HAL/Inc/nrf_drv_common.h \
+ components/libraries/util/sdk_macros.h \
  components/libraries/log/nrf_log.h \
  components/libraries/log/src/nrf_log_internal.h
 
@@ -225,14 +223,6 @@ components/libraries/util/sdk_os.h:
 components/libraries/util/app_util.h:
 
 components/libraries/util/sdk_macros.h:
-
-Drivers/HAL/Inc/nrf_drv_clock.h:
-
-components/libraries/util/sdk_errors.h:
-
-components/drivers_nrf/hal/nrf_clock.h:
-
-Drivers/HAL/Inc/nrf_drv_common.h:
 
 components/libraries/log/nrf_log.h:
 

@@ -1123,9 +1123,13 @@ void gatt_init(void)
 
 void ble_on(void)
 {
-	advertising_init();
+		advertising_init();
+		//bsp_Sensor0init();
 	    advertising_start();
+	    start_acc =true;
 	    NRF_LOG_INFO("BLE_START!\r\n");
+
+	  //  application_timers_start();
 }
 
 
@@ -1135,7 +1139,7 @@ void ble_on(void)
 int ble_init(void)
 {
    // uint32_t err_code;
-    bool     erase_bonds;
+ //   bool     erase_bonds;
     // Initialize.
    // err_code = NRF_LOG_INIT(NULL);
     //APP_ERROR_CHECK(err_code);
@@ -1144,9 +1148,9 @@ int ble_init(void)
     ble_stack_init();
     //peer_manager_init(erase_bonds);
     //if (erase_bonds == true)
-     {
-            NRF_LOG_INFO("Bonds erased!\r\n");
-     }
+//     {
+//            NRF_LOG_INFO("Bonds erased!\r\n");
+//     }
 
        gap_params_init();
 
@@ -1154,21 +1158,21 @@ int ble_init(void)
        services_init();
        // sensor_simulator_init();
        conn_params_init();
-    //   bsp_Sensor0init();
+       bsp_Sensor0init();
         // Start execution.
     //    NRF_LOG_INFO("Heart Rate Sensor Start2!\r\n");
     NRF_LOG_INFO("STARTING\r\n");
     NRF_LOG_INFO("Start!\r\n");
     //ble_on();
     // Enter main loop.
-    bsp_Sensor0init();
+
     application_timers_start();
     for (;;)
     {
 
 //        NRF_LOG_INFO("Heart Rate Sensor Start4!\r\n");
-    //	if(start_acc ==true)
-    //	{
+    	if(start_acc ==true)
+    	{
     //	nrf_delay_ms(1200);
     	bsp_ReadSensor0read();
     //	nrf_delay_ms(1500);
@@ -1186,7 +1190,7 @@ int ble_init(void)
 //   //     nrf_delay_ms(1700);
         bsp_ReadSensor7read();
 
-    //	}
+    	}
     	if(g_state ==true)
         	NRF_LOG_INFO("state %d\n ",g_state);
         	if(g_state ==true)
@@ -1195,13 +1199,11 @@ int ble_init(void)
         	timer=0;
         	if(timer>0)
     		NRF_LOG_INFO("timer %d\n ",timer);
-         //   if (NRF_LOG_PROCESS() == false)
-          //  {
-               // NRF_LOG_INFO("\r\n");
-              //  power_manage();
-         //   }
-
-
+        	 // Wait for an event.
+        	 __WFE();
+        	 // Clear the internal event register.
+        	 __SEV();
+        	 __WFE();
 
     }
 }

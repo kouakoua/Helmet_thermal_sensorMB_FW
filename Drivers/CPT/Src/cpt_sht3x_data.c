@@ -16,6 +16,7 @@
 
 
 #include "nrf_delay.h"
+#include "app_util_platform.h"
 #include <stdbool.h>
 
 #include "../Inc/cpt_sht3x_data.h"

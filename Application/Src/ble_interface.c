@@ -73,7 +73,6 @@
 #include "bsp_btn_ble.h"
 #include "peer_manager.h"
 #include "fds.h"
-#include "cpt_btn.h"
 #include "fstorage.h"
 #include "nrf_ble_gatt.h"
 #include "ble_conn_state.h"
@@ -93,7 +92,7 @@
 #define DEVICE_NAME                      "Helmet_Sensors"                                /**< Name of device. Will be included in the advertising data. */
 #define MANUFACTURER_NAME                "GT SILICON"                       /**< Manufacturer. Will be passed to Device Information Service. */
 #define APP_ADV_INTERVAL                 64                                         /**< The advertising interval (in units of 0.625 ms. This value corresponds to 187.5 ms). */
-#define APP_ADV_TIMEOUT_IN_SECONDS       0                                         /**< The advertising timeout in units of seconds. */
+#define APP_ADV_TIMEOUT_IN_SECONDS       180                                         /**< The advertising timeout in units of seconds. */
 
 #define APP_TIMER_PRESCALER              0                                           /**< Value of the RTC1 PRESCALER register. */
 #define APP_TIMER_OP_QUEUE_SIZE          4                                           /**< Size of timer operation queues. */
@@ -107,7 +106,7 @@
 
 #define SENSOR_CONTACT_DETECTED_INTERVAL APP_TIMER_TICKS(500, APP_TIMER_PRESCALER)  /**< Sensor Contact Detected toggle interval (ticks). */
 
-#define MIN_CONN_INTERVAL                MSEC_TO_UNITS(15, UNIT_1_25_MS)            /**< Minimum acceptable connection interval (0.4 seconds). */
+#define MIN_CONN_INTERVAL                MSEC_TO_UNITS(20, UNIT_1_25_MS)            /**< Minimum acceptable connection interval (0.4 seconds). */
 #define MAX_CONN_INTERVAL                MSEC_TO_UNITS(70, UNIT_1_25_MS)            /**< Maximum acceptable connection interval (0.65 second). */
 #define SLAVE_LATENCY                    0                                           /**< Slave latency. */
 #define CONN_SUP_TIMEOUT                 MSEC_TO_UNITS(4000, UNIT_10_MS)             /**< Connection supervisory timeout (4 seconds). */
@@ -150,7 +149,7 @@ static uint32_t cnt = 0;
 static int dataPacket = 0;
 uint32_t        err_code;
 static uint16_t        heart_rate;
-uint16_t timer;
+
 static int i;
 static uint16_t CheckSum = 0;
 static ble_uuid_t m_adv_uuids[] = {{BLE_UUID_HEART_RATE_SERVICE, BLE_UUID_TYPE_BLE},
@@ -1121,89 +1120,70 @@ void gatt_init(void)
     APP_ERROR_CHECK(err_code);
 }
 
-void ble_on(void)
-{
-		advertising_init();
-		//bsp_Sensor0init();
-	    advertising_start();
-	    start_acc =true;
-	    NRF_LOG_INFO("BLE_START!\r\n");
-
-	  //  application_timers_start();
-}
-
-
 
 /**@brief Function for application main entry.
  */
 int ble_init(void)
 {
    // uint32_t err_code;
- //   bool     erase_bonds;
+    bool     erase_bonds;
     // Initialize.
    // err_code = NRF_LOG_INIT(NULL);
     //APP_ERROR_CHECK(err_code);
+    NRF_LOG_INFO("STARTING\r\n");
+    NRF_LOG_INFO("Heart Rate Sensor Start!\r\n");
+    bsp_Sensor0init();
     timers_init();
     //buttons_leds_init(&erase_bonds);
     ble_stack_init();
     //peer_manager_init(erase_bonds);
     //if (erase_bonds == true)
-//     {
-//            NRF_LOG_INFO("Bonds erased!\r\n");
-//     }
+    {
+        NRF_LOG_INFO("Bonds erased!\r\n");
+    }
 
-       gap_params_init();
-
-       gatt_init();
-       services_init();
-       // sensor_simulator_init();
-       conn_params_init();
-       bsp_Sensor0init();
-        // Start execution.
-    //    NRF_LOG_INFO("Heart Rate Sensor Start2!\r\n");
-    NRF_LOG_INFO("STARTING\r\n");
-    NRF_LOG_INFO("Start!\r\n");
-    //ble_on();
-    // Enter main loop.
-
+    gap_params_init();
+    advertising_init();
+    gatt_init();
+    services_init();
+   // sensor_simulator_init();
+    conn_params_init();
+ //   bsp_Sensor0init();
+    // Start execution.
+    NRF_LOG_INFO("Heart Rate Sensor Start2!\r\n");
     application_timers_start();
+    advertising_start();
+    NRF_LOG_INFO("Heart Rate Sensor Start3!\r\n");
+    // Enter main loop.
     for (;;)
     {
-
 //        NRF_LOG_INFO("Heart Rate Sensor Start4!\r\n");
-    	if(start_acc ==true)
-    	{
-    //	nrf_delay_ms(1200);
+ //   	nrf_delay_ms(700);
     	bsp_ReadSensor0read();
-    //	nrf_delay_ms(1500);
+    	//nrf_delay_ms(500);
     	bsp_ReadSensor1read();
-//    //	nrf_delay_ms(1700);
+//    	nrf_delay_ms(700);
     	bsp_ReadSensor2read();
-//    //	nrf_delay_ms(1500);
+    	//nrf_delay_ms(500);
     	bsp_ReadSensor3read();
-//    //    nrf_delay_ms(1500);
+        //nrf_delay_ms(500);
         bsp_ReadSensor4read();
-//   //     nrf_delay_ms(1500);
+        //nrf_delay_ms(500);
         bsp_ReadSensor5read();
-//   //     nrf_delay_ms(1700);
+     //   nrf_delay_ms(700);
         bsp_ReadSensor6read();
-//   //     nrf_delay_ms(1700);
+     //   nrf_delay_ms(700);
         bsp_ReadSensor7read();
-
-    	}
-    	if(g_state ==true)
-        	NRF_LOG_INFO("state %d\n ",g_state);
-        	if(g_state ==true)
-        	timer++;
-        	else
-        	timer=0;
-        	if(timer>0)
-    		NRF_LOG_INFO("timer %d\n ",timer);
-        	 // Wait for an event.
-        	 __WFE();
-        	 // Clear the internal event register.
-        	 __SEV();
-        	 __WFE();
+        if (NRF_LOG_PROCESS() == false)
+        {
+           // NRF_LOG_INFO("\r\n");
+            power_manage();
+        }
+     // Wait for an event.
+         __WFE();
+       //        // Clear the internal event register.
+         __SEV();
+         __WFE();
 
     }
 }

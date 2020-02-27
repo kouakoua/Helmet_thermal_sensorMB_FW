@@ -107,7 +107,8 @@ _build/nrf51422_xxac_ble_interface.c.o: Application/Src/ble_interface.c \
  components/libraries/log/nrf_log_backend.h \
  components/libraries/log/nrf_log_ctrl.h \
  components/libraries/log/src/nrf_log_ctrl_internal.h \
- Application/Inc/ble_interface.h components/libraries/log/nrf_log.h \
+ Drivers/BSP/Inc/bsp_adc.h Application/Inc/ble_interface.h \
+ components/libraries/log/nrf_log.h \
  components/libraries/log/src/nrf_log_internal.h \
  components/libraries/log/nrf_log_ctrl.h
 
@@ -346,6 +347,8 @@ components/libraries/log/nrf_log_backend.h:
 components/libraries/log/nrf_log_ctrl.h:
 
 components/libraries/log/src/nrf_log_ctrl_internal.h:
+
+Drivers/BSP/Inc/bsp_adc.h:
 
 Application/Inc/ble_interface.h:
 

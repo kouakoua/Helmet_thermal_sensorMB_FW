@@ -48,7 +48,7 @@ _build/nrf51422_xxac_main.c.o: Application/Src/main.c \
  components/libraries/util/app_error_weak.h \
  c:\program\ files\ (x86)\gnu\ tools\ arm\ embedded\8\ 2019-q3-update\arm-none-eabi\include\stdlib.h \
  c:\program\ files\ (x86)\gnu\ tools\ arm\ embedded\8\ 2019-q3-update\arm-none-eabi\include\machine\stdlib.h \
- components/libraries/util/sdk_errors.h \
+ components/libraries/util/sdk_errors.h Drivers/BSP/Inc/bsp_adc.h \
  components/libraries/log/nrf_log.h \
  components/libraries/log/src/nrf_log_internal.h \
  components/libraries/util/sdk_common.h \
@@ -58,13 +58,6 @@ _build/nrf51422_xxac_main.c.o: Application/Src/main.c \
  components/libraries/util/app_util.h \
  components/libraries/log/nrf_log_ctrl.h \
  components/libraries/log/src/nrf_log_ctrl_internal.h \
- components/libraries/util/app_util_platform.h \
- components/softdevice/s130/headers/nrf_soc.h \
- components/softdevice/s130/headers/nrf_svc.h \
- components/softdevice/s130/headers/nrf_error_soc.h \
- components/softdevice/s130/headers/nrf_error.h \
- components/softdevice/s130/headers/nrf_nvic.h \
- components/libraries/util/nrf_assert.h \
  components/libraries/log/nrf_log_backend.h \
  components/libraries/log/nrf_log_ctrl.h
 
@@ -178,6 +171,8 @@ c:\program\ files\ (x86)\gnu\ tools\ arm\ embedded\8\ 2019-q3-update\arm-none-ea
 
 components/libraries/util/sdk_errors.h:
 
+Drivers/BSP/Inc/bsp_adc.h:
+
 components/libraries/log/nrf_log.h:
 
 components/libraries/log/src/nrf_log_internal.h:
@@ -197,20 +192,6 @@ components/libraries/util/app_util.h:
 components/libraries/log/nrf_log_ctrl.h:
 
 components/libraries/log/src/nrf_log_ctrl_internal.h:
-
-components/libraries/util/app_util_platform.h:
-
-components/softdevice/s130/headers/nrf_soc.h:
-
-components/softdevice/s130/headers/nrf_svc.h:
-
-components/softdevice/s130/headers/nrf_error_soc.h:
-
-components/softdevice/s130/headers/nrf_error.h:
-
-components/softdevice/s130/headers/nrf_nvic.h:
-
-components/libraries/util/nrf_assert.h:
 
 components/libraries/log/nrf_log_backend.h:
 

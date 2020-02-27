@@ -36,6 +36,10 @@ SRC_FILES += \
    Drivers/CPT/Src/cpt_btn.c \
    Drivers/BSP/Src/bsp_sensor.c \
    Drivers/BSP/Src/bsp_btn.c \
+   Drivers/BSP/Src/bsp_adc.c \
+   Drivers/CPT/Src/cpt_adc.c\
+   Drivers/HAL/Src/hal_adc.c \
+   Drivers/HAL/Src/hal_drv_adc.c \
    components/libraries/bsp/bsp.c \
    components/libraries/bsp/bsp_btn_ble.c \
    components/libraries/bsp/bsp_nfc.c \

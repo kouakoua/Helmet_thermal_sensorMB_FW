@@ -77,7 +77,7 @@
 #include "nrf_ble_gatt.h"
 #include "ble_conn_state.h"
 #include "nrf_log_backend.h"
-
+#include "bsp_adc.h"
 #include "ble_interface.h"
 //#include "bsp_btn.h"
 
@@ -309,9 +309,9 @@ static void battery_level_update(void)
 	//NRF_LOG_INFO("5 ");
     uint32_t err_code;
     int8_t  battery_level;
-    battery_level = (uint8_t)sensorsim_measure(&m_battery_sim_state, &m_battery_sim_cfg);
-
-
+    battery_level = (uint8_t)((bsp_adc_Config())/4);
+    NRF_LOG_INFO("Bat vOLT %d\n",bsp_adc_Config());
+    		//(uint8_t)sensorsim_measure(&m_battery_sim_state, &m_battery_sim_cfg);
     err_code = ble_bas_battery_level_update(&m_bas, battery_level);
     if ((err_code != NRF_SUCCESS) &&
         (err_code != NRF_ERROR_INVALID_STATE) &&
@@ -335,7 +335,7 @@ static void battery_level_meas_timeout_handler(void * p_context)
 {
 	//NRF_LOG_INFO("6 ");
     UNUSED_PARAMETER(p_context);
-   // battery_level_update();
+    battery_level_update();
 }
 /*
  * Added by Inertial Elements

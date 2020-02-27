@@ -260,7 +260,7 @@
 // <e> ADC_ENABLED - nrf_drv_adc - Driver for ADC peripheral (nRF51)
 //==========================================================
 #ifndef ADC_ENABLED
-#define ADC_ENABLED 0
+#define ADC_ENABLED 1
 #endif
 #if  ADC_ENABLED
 // <o> ADC_CONFIG_IRQ_PRIORITY  - Interrupt priority
@@ -3515,7 +3515,7 @@
 // <e> NRF_LOG_ENABLED - nrf_log - Logging
 //==========================================================
 #ifndef NRF_LOG_ENABLED
-#define NRF_LOG_ENABLED 1
+#define NRF_LOG_ENABLED 0
 #endif
 #if  NRF_LOG_ENABLED
 // <e> NRF_LOG_USES_COLORS - If enabled then ANSI escape code for colors is prefixed to every string

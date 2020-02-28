@@ -6937,7 +6937,7 @@ RAM              0x20001fe8         0x00006018         xrw
 Linker script and memory map
 
 
-.text           0x0001b000     0x8b28
+.text           0x0001b000     0x8b24
  *(.isr_vector)
  .isr_vector    0x0001b000       0xc0 _build/nrf51422_xxac_gcc_startup_nrf51.S.o
                 0x0001b000                __isr_vector
@@ -7318,598 +7318,598 @@ Linker script and memory map
                 0x0001e254       0x1c _build/nrf51422_xxac_ble_interface.c.o
                 0x0001e254                gatt_init
  .text.ble_init
-                0x0001e270      0x310 _build/nrf51422_xxac_ble_interface.c.o
+                0x0001e270      0x314 _build/nrf51422_xxac_ble_interface.c.o
                 0x0001e270                ble_init
  .text.sd_ble_gap_address_get
-                0x0001e580        0x4 _build/nrf51422_xxac_ble_advdata.c.o
- .text.sd_ble_gap_adv_data_set
                 0x0001e584        0x4 _build/nrf51422_xxac_ble_advdata.c.o
- .text.sd_ble_gap_appearance_get
+ .text.sd_ble_gap_adv_data_set
                 0x0001e588        0x4 _build/nrf51422_xxac_ble_advdata.c.o
- .text.sd_ble_gap_device_name_get
+ .text.sd_ble_gap_appearance_get
                 0x0001e58c        0x4 _build/nrf51422_xxac_ble_advdata.c.o
- .text.sd_ble_uuid_encode
+ .text.sd_ble_gap_device_name_get
                 0x0001e590        0x4 _build/nrf51422_xxac_ble_advdata.c.o
+ .text.sd_ble_uuid_encode
+                0x0001e594        0x4 _build/nrf51422_xxac_ble_advdata.c.o
  .text.uuid_list_sized_encode
-                0x0001e594       0xb8 _build/nrf51422_xxac_ble_advdata.c.o
+                0x0001e598       0xb8 _build/nrf51422_xxac_ble_advdata.c.o
  .text.uuid_list_encode
-                0x0001e64c       0x34 _build/nrf51422_xxac_ble_advdata.c.o
+                0x0001e650       0x34 _build/nrf51422_xxac_ble_advdata.c.o
  .text.adv_data_encode
-                0x0001e680      0x3a0 _build/nrf51422_xxac_ble_advdata.c.o
-                0x0001e680                adv_data_encode
+                0x0001e684      0x3a0 _build/nrf51422_xxac_ble_advdata.c.o
+                0x0001e684                adv_data_encode
  .text.ble_advdata_set
-                0x0001ea20       0x62 _build/nrf51422_xxac_ble_advdata.c.o
-                0x0001ea20                ble_advdata_set
+                0x0001ea24       0x62 _build/nrf51422_xxac_ble_advdata.c.o
+                0x0001ea24                ble_advdata_set
  .text.sd_ble_gap_adv_start
-                0x0001ea82        0x4 _build/nrf51422_xxac_ble_advertising.c.o
- *fill*         0x0001ea86        0x2 
+                0x0001ea86        0x4 _build/nrf51422_xxac_ble_advertising.c.o
+ *fill*         0x0001ea8a        0x2 
  .text.ble_advertising_init
-                0x0001ea88      0x16c _build/nrf51422_xxac_ble_advertising.c.o
-                0x0001ea88                ble_advertising_init
+                0x0001ea8c      0x16c _build/nrf51422_xxac_ble_advertising.c.o
+                0x0001ea8c                ble_advertising_init
  .text.ble_advertising_start
-                0x0001ebf4      0x220 _build/nrf51422_xxac_ble_advertising.c.o
-                0x0001ebf4                ble_advertising_start
+                0x0001ebf8      0x220 _build/nrf51422_xxac_ble_advertising.c.o
+                0x0001ebf8                ble_advertising_start
  .text.ble_advertising_on_ble_evt
-                0x0001ee14       0x6c _build/nrf51422_xxac_ble_advertising.c.o
-                0x0001ee14                ble_advertising_on_ble_evt
+                0x0001ee18       0x6c _build/nrf51422_xxac_ble_advertising.c.o
+                0x0001ee18                ble_advertising_on_ble_evt
  .text.ble_advertising_on_sys_evt
-                0x0001ee80       0x38 _build/nrf51422_xxac_ble_advertising.c.o
-                0x0001ee80                ble_advertising_on_sys_evt
+                0x0001ee84       0x38 _build/nrf51422_xxac_ble_advertising.c.o
+                0x0001ee84                ble_advertising_on_sys_evt
  .text.sd_ble_gap_conn_param_update
-                0x0001eeb8        0x4 _build/nrf51422_xxac_ble_conn_params.c.o
- .text.sd_ble_gap_disconnect
                 0x0001eebc        0x4 _build/nrf51422_xxac_ble_conn_params.c.o
- .text.sd_ble_gap_ppcp_set
+ .text.sd_ble_gap_disconnect
                 0x0001eec0        0x4 _build/nrf51422_xxac_ble_conn_params.c.o
- .text.sd_ble_gap_ppcp_get
+ .text.sd_ble_gap_ppcp_set
                 0x0001eec4        0x4 _build/nrf51422_xxac_ble_conn_params.c.o
+ .text.sd_ble_gap_ppcp_get
+                0x0001eec8        0x4 _build/nrf51422_xxac_ble_conn_params.c.o
  .text.update_timeout_handler
-                0x0001eec8       0x70 _build/nrf51422_xxac_ble_conn_params.c.o
+                0x0001eecc       0x70 _build/nrf51422_xxac_ble_conn_params.c.o
  .text.conn_params_negotiation
-                0x0001ef38       0x7c _build/nrf51422_xxac_ble_conn_params.c.o
+                0x0001ef3c       0x7c _build/nrf51422_xxac_ble_conn_params.c.o
  .text.ble_conn_params_init
-                0x0001efb4       0x70 _build/nrf51422_xxac_ble_conn_params.c.o
-                0x0001efb4                ble_conn_params_init
+                0x0001efb8       0x70 _build/nrf51422_xxac_ble_conn_params.c.o
+                0x0001efb8                ble_conn_params_init
  .text.ble_conn_params_on_ble_evt
-                0x0001f024       0xac _build/nrf51422_xxac_ble_conn_params.c.o
-                0x0001f024                ble_conn_params_on_ble_evt
+                0x0001f028       0xac _build/nrf51422_xxac_ble_conn_params.c.o
+                0x0001f028                ble_conn_params_on_ble_evt
  .text.ble_conn_state_on_ble_evt
-                0x0001f0d0       0xe8 _build/nrf51422_xxac_ble_conn_state.c.o
-                0x0001f0d0                ble_conn_state_on_ble_evt
+                0x0001f0d4       0xe8 _build/nrf51422_xxac_ble_conn_state.c.o
+                0x0001f0d4                ble_conn_state_on_ble_evt
  .text.ble_conn_state_role
-                0x0001f1b8       0x30 _build/nrf51422_xxac_ble_conn_state.c.o
-                0x0001f1b8                ble_conn_state_role
+                0x0001f1bc       0x30 _build/nrf51422_xxac_ble_conn_state.c.o
+                0x0001f1bc                ble_conn_state_role
  .text.ble_conn_state_encrypted
-                0x0001f1e8       0x14 _build/nrf51422_xxac_ble_conn_state.c.o
-                0x0001f1e8                ble_conn_state_encrypted
+                0x0001f1ec       0x14 _build/nrf51422_xxac_ble_conn_state.c.o
+                0x0001f1ec                ble_conn_state_encrypted
  .text.ble_conn_state_mitm_protected
-                0x0001f1fc       0x14 _build/nrf51422_xxac_ble_conn_state.c.o
-                0x0001f1fc                ble_conn_state_mitm_protected
+                0x0001f200       0x14 _build/nrf51422_xxac_ble_conn_state.c.o
+                0x0001f200                ble_conn_state_mitm_protected
  .text.ble_conn_state_conn_handles
-                0x0001f210       0x18 _build/nrf51422_xxac_ble_conn_state.c.o
-                0x0001f210                ble_conn_state_conn_handles
+                0x0001f214       0x18 _build/nrf51422_xxac_ble_conn_state.c.o
+                0x0001f214                ble_conn_state_conn_handles
  .text.ble_conn_state_user_flag_get
-                0x0001f228       0x24 _build/nrf51422_xxac_ble_conn_state.c.o
-                0x0001f228                ble_conn_state_user_flag_get
+                0x0001f22c       0x24 _build/nrf51422_xxac_ble_conn_state.c.o
+                0x0001f22c                ble_conn_state_user_flag_get
  .text.ble_conn_state_user_flag_set
-                0x0001f24c       0x24 _build/nrf51422_xxac_ble_conn_state.c.o
-                0x0001f24c                ble_conn_state_user_flag_set
+                0x0001f250       0x24 _build/nrf51422_xxac_ble_conn_state.c.o
+                0x0001f250                ble_conn_state_user_flag_set
  .text.ble_conn_state_user_flag_collection
-                0x0001f270       0x1c _build/nrf51422_xxac_ble_conn_state.c.o
-                0x0001f270                ble_conn_state_user_flag_collection
+                0x0001f274       0x1c _build/nrf51422_xxac_ble_conn_state.c.o
+                0x0001f274                ble_conn_state_user_flag_collection
  .text.ble_srv_is_notification_enabled
-                0x0001f28c        0x8 _build/nrf51422_xxac_ble_srv_common.c.o
-                0x0001f28c                ble_srv_is_notification_enabled
+                0x0001f290        0x8 _build/nrf51422_xxac_ble_srv_common.c.o
+                0x0001f290                ble_srv_is_notification_enabled
  .text.ble_srv_report_ref_encode
-                0x0001f294        0xc _build/nrf51422_xxac_ble_srv_common.c.o
-                0x0001f294                ble_srv_report_ref_encode
+                0x0001f298        0xc _build/nrf51422_xxac_ble_srv_common.c.o
+                0x0001f298                ble_srv_report_ref_encode
  .text.ble_srv_ascii_to_utf8
-                0x0001f2a0       0x12 _build/nrf51422_xxac_ble_srv_common.c.o
-                0x0001f2a0                ble_srv_ascii_to_utf8
+                0x0001f2a4       0x12 _build/nrf51422_xxac_ble_srv_common.c.o
+                0x0001f2a4                ble_srv_ascii_to_utf8
  .text.evt_send.part.0
-                0x0001f2b2        0x8 _build/nrf51422_xxac_gatt_cache_manager.c.o
- *fill*         0x0001f2ba        0x2 
+                0x0001f2b6        0x8 _build/nrf51422_xxac_gatt_cache_manager.c.o
+ *fill*         0x0001f2be        0x2 
  .text.local_db_update_in_evt
-                0x0001f2bc       0x80 _build/nrf51422_xxac_gatt_cache_manager.c.o
+                0x0001f2c0       0x80 _build/nrf51422_xxac_gatt_cache_manager.c.o
  .text.local_db_apply_in_evt
-                0x0001f33c       0x84 _build/nrf51422_xxac_gatt_cache_manager.c.o
+                0x0001f340       0x84 _build/nrf51422_xxac_gatt_cache_manager.c.o
  .text.service_changed_pending_flags_check
-                0x0001f3c0       0xf0 _build/nrf51422_xxac_gatt_cache_manager.c.o
+                0x0001f3c4       0xf0 _build/nrf51422_xxac_gatt_cache_manager.c.o
  .text.gcm_gscm_evt_handler
-                0x0001f4b0       0x68 _build/nrf51422_xxac_gatt_cache_manager.c.o
-                0x0001f4b0                gcm_gscm_evt_handler
+                0x0001f4b4       0x68 _build/nrf51422_xxac_gatt_cache_manager.c.o
+                0x0001f4b4                gcm_gscm_evt_handler
  .text.gcm_im_evt_handler
-                0x0001f518       0x2c _build/nrf51422_xxac_gatt_cache_manager.c.o
-                0x0001f518                gcm_im_evt_handler
+                0x0001f51c       0x2c _build/nrf51422_xxac_gatt_cache_manager.c.o
+                0x0001f51c                gcm_im_evt_handler
  .text.gcm_smd_evt_handler
-                0x0001f544       0x10 _build/nrf51422_xxac_gatt_cache_manager.c.o
-                0x0001f544                gcm_smd_evt_handler
+                0x0001f548       0x10 _build/nrf51422_xxac_gatt_cache_manager.c.o
+                0x0001f548                gcm_smd_evt_handler
  .text.gcm_ble_evt_handler
-                0x0001f554       0xec _build/nrf51422_xxac_gatt_cache_manager.c.o
-                0x0001f554                gcm_ble_evt_handler
+                0x0001f558       0xec _build/nrf51422_xxac_gatt_cache_manager.c.o
+                0x0001f558                gcm_ble_evt_handler
  .text.sd_ble_gatts_service_changed
-                0x0001f640        0x4 _build/nrf51422_xxac_gatts_cache_manager.c.o
- .text.sd_ble_gatts_sys_attr_set
                 0x0001f644        0x4 _build/nrf51422_xxac_gatts_cache_manager.c.o
- .text.sd_ble_gatts_sys_attr_get
+ .text.sd_ble_gatts_sys_attr_set
                 0x0001f648        0x4 _build/nrf51422_xxac_gatts_cache_manager.c.o
+ .text.sd_ble_gatts_sys_attr_get
+                0x0001f64c        0x4 _build/nrf51422_xxac_gatts_cache_manager.c.o
  .text.service_changed_pending_set
-                0x0001f64c       0x3c _build/nrf51422_xxac_gatts_cache_manager.c.o
+                0x0001f650       0x3c _build/nrf51422_xxac_gatts_cache_manager.c.o
  .text.gscm_pdb_evt_handler
-                0x0001f688       0x4c _build/nrf51422_xxac_gatts_cache_manager.c.o
-                0x0001f688                gscm_pdb_evt_handler
+                0x0001f68c       0x4c _build/nrf51422_xxac_gatts_cache_manager.c.o
+                0x0001f68c                gscm_pdb_evt_handler
  .text.gscm_local_db_cache_update
-                0x0001f6d4       0x88 _build/nrf51422_xxac_gatts_cache_manager.c.o
-                0x0001f6d4                gscm_local_db_cache_update
+                0x0001f6d8       0x88 _build/nrf51422_xxac_gatts_cache_manager.c.o
+                0x0001f6d8                gscm_local_db_cache_update
  .text.gscm_local_db_cache_apply
-                0x0001f75c       0x80 _build/nrf51422_xxac_gatts_cache_manager.c.o
-                0x0001f75c                gscm_local_db_cache_apply
+                0x0001f760       0x80 _build/nrf51422_xxac_gatts_cache_manager.c.o
+                0x0001f760                gscm_local_db_cache_apply
  .text.gscm_service_changed_ind_needed
-                0x0001f7dc       0x1c _build/nrf51422_xxac_gatts_cache_manager.c.o
-                0x0001f7dc                gscm_service_changed_ind_needed
+                0x0001f7e0       0x1c _build/nrf51422_xxac_gatts_cache_manager.c.o
+                0x0001f7e0                gscm_service_changed_ind_needed
  .text.gscm_service_changed_ind_send
-                0x0001f7f8       0x2c _build/nrf51422_xxac_gatts_cache_manager.c.o
-                0x0001f7f8                gscm_service_changed_ind_send
+                0x0001f7fc       0x2c _build/nrf51422_xxac_gatts_cache_manager.c.o
+                0x0001f7fc                gscm_service_changed_ind_send
  .text.gscm_db_change_notification_done
-                0x0001f824       0x1c _build/nrf51422_xxac_gatts_cache_manager.c.o
-                0x0001f824                gscm_db_change_notification_done
+                0x0001f828       0x1c _build/nrf51422_xxac_gatts_cache_manager.c.o
+                0x0001f828                gscm_db_change_notification_done
  .text.sd_ecb_block_encrypt
-                0x0001f840        0x4 _build/nrf51422_xxac_id_manager.c.o
+                0x0001f844        0x4 _build/nrf51422_xxac_id_manager.c.o
  .text.evt_send
-                0x0001f844       0x10 _build/nrf51422_xxac_id_manager.c.o
+                0x0001f848       0x10 _build/nrf51422_xxac_id_manager.c.o
  .text.get_free_connection
-                0x0001f854       0x2c _build/nrf51422_xxac_id_manager.c.o
-                0x0001f854                get_free_connection
+                0x0001f858       0x2c _build/nrf51422_xxac_id_manager.c.o
+                0x0001f858                get_free_connection
  .text.get_connection_by_conn_handle
-                0x0001f880       0x38 _build/nrf51422_xxac_id_manager.c.o
-                0x0001f880                get_connection_by_conn_handle
+                0x0001f884       0x38 _build/nrf51422_xxac_id_manager.c.o
+                0x0001f884                get_connection_by_conn_handle
  .text.new_connection
-                0x0001f8b8       0x5c _build/nrf51422_xxac_id_manager.c.o
-                0x0001f8b8                new_connection
+                0x0001f8bc       0x5c _build/nrf51422_xxac_id_manager.c.o
+                0x0001f8bc                new_connection
  .text.is_valid_irk
-                0x0001f914       0x18 _build/nrf51422_xxac_id_manager.c.o
-                0x0001f914                is_valid_irk
+                0x0001f918       0x18 _build/nrf51422_xxac_id_manager.c.o
+                0x0001f918                is_valid_irk
  .text.addr_compare
-                0x0001f92c       0x28 _build/nrf51422_xxac_id_manager.c.o
-                0x0001f92c                addr_compare
+                0x0001f930       0x28 _build/nrf51422_xxac_id_manager.c.o
+                0x0001f930                addr_compare
  .text.im_is_duplicate_bonding_data
-                0x0001f954       0x34 _build/nrf51422_xxac_id_manager.c.o
-                0x0001f954                im_is_duplicate_bonding_data
+                0x0001f958       0x34 _build/nrf51422_xxac_id_manager.c.o
+                0x0001f958                im_is_duplicate_bonding_data
  .text.im_peer_id_get_by_conn_handle
-                0x0001f988       0x20 _build/nrf51422_xxac_id_manager.c.o
-                0x0001f988                im_peer_id_get_by_conn_handle
+                0x0001f98c       0x20 _build/nrf51422_xxac_id_manager.c.o
+                0x0001f98c                im_peer_id_get_by_conn_handle
  .text.im_ble_addr_get
-                0x0001f9a8       0x2c _build/nrf51422_xxac_id_manager.c.o
-                0x0001f9a8                im_ble_addr_get
+                0x0001f9ac       0x2c _build/nrf51422_xxac_id_manager.c.o
+                0x0001f9ac                im_ble_addr_get
  .text.im_conn_handle_get
-                0x0001f9d4       0x2c _build/nrf51422_xxac_id_manager.c.o
-                0x0001f9d4                im_conn_handle_get
+                0x0001f9d8       0x2c _build/nrf51422_xxac_id_manager.c.o
+                0x0001f9d8                im_conn_handle_get
  .text.im_pdb_evt_handler
-                0x0001fa00       0x68 _build/nrf51422_xxac_id_manager.c.o
-                0x0001fa00                im_pdb_evt_handler
+                0x0001fa04       0x68 _build/nrf51422_xxac_id_manager.c.o
+                0x0001fa04                im_pdb_evt_handler
  .text.im_master_id_is_valid
-                0x0001fa68       0x20 _build/nrf51422_xxac_id_manager.c.o
-                0x0001fa68                im_master_id_is_valid
+                0x0001fa6c       0x20 _build/nrf51422_xxac_id_manager.c.o
+                0x0001fa6c                im_master_id_is_valid
  .text.im_master_ids_compare
-                0x0001fa88       0x2a _build/nrf51422_xxac_id_manager.c.o
-                0x0001fa88                im_master_ids_compare
- *fill*         0x0001fab2        0x2 
+                0x0001fa8c       0x2a _build/nrf51422_xxac_id_manager.c.o
+                0x0001fa8c                im_master_ids_compare
+ *fill*         0x0001fab6        0x2 
  .text.im_peer_id_get_by_master_id
-                0x0001fab4       0x4c _build/nrf51422_xxac_id_manager.c.o
-                0x0001fab4                im_peer_id_get_by_master_id
+                0x0001fab8       0x4c _build/nrf51422_xxac_id_manager.c.o
+                0x0001fab8                im_peer_id_get_by_master_id
  .text.im_new_peer_id
-                0x0001fb00       0x1c _build/nrf51422_xxac_id_manager.c.o
-                0x0001fb00                im_new_peer_id
+                0x0001fb04       0x1c _build/nrf51422_xxac_id_manager.c.o
+                0x0001fb04                im_new_peer_id
  .text.im_peer_free
-                0x0001fb1c       0x40 _build/nrf51422_xxac_id_manager.c.o
-                0x0001fb1c                im_peer_free
- .text.ah       0x0001fb5c       0x58 _build/nrf51422_xxac_id_manager.c.o
-                0x0001fb5c                ah
+                0x0001fb20       0x40 _build/nrf51422_xxac_id_manager.c.o
+                0x0001fb20                im_peer_free
+ .text.ah       0x0001fb60       0x58 _build/nrf51422_xxac_id_manager.c.o
+                0x0001fb60                ah
  .text.im_address_resolve
-                0x0001fbb4       0x42 _build/nrf51422_xxac_id_manager.c.o
-                0x0001fbb4                im_address_resolve
- *fill*         0x0001fbf6        0x2 
+                0x0001fbb8       0x42 _build/nrf51422_xxac_id_manager.c.o
+                0x0001fbb8                im_address_resolve
+ *fill*         0x0001fbfa        0x2 
  .text.im_ble_evt_handler
-                0x0001fbf8       0xb8 _build/nrf51422_xxac_id_manager.c.o
-                0x0001fbf8                im_ble_evt_handler
+                0x0001fbfc       0xb8 _build/nrf51422_xxac_id_manager.c.o
+                0x0001fbfc                im_ble_evt_handler
  .text.nrf_ble_gatt_init
-                0x0001fcb0        0x4 _build/nrf51422_xxac_nrf_ble_gatt.c.o
-                0x0001fcb0                nrf_ble_gatt_init
+                0x0001fcb4        0x4 _build/nrf51422_xxac_nrf_ble_gatt.c.o
+                0x0001fcb4                nrf_ble_gatt_init
  .text.nrf_ble_gatt_on_ble_evt
-                0x0001fcb4        0x2 _build/nrf51422_xxac_nrf_ble_gatt.c.o
-                0x0001fcb4                nrf_ble_gatt_on_ble_evt
+                0x0001fcb8        0x2 _build/nrf51422_xxac_nrf_ble_gatt.c.o
+                0x0001fcb8                nrf_ble_gatt_on_ble_evt
  .text.peer_data_id_is_valid
-                0x0001fcb6       0x16 _build/nrf51422_xxac_peer_data_storage.c.o
+                0x0001fcba       0x16 _build/nrf51422_xxac_peer_data_storage.c.o
  .text.peer_data_find
-                0x0001fccc       0x30 _build/nrf51422_xxac_peer_data_storage.c.o
+                0x0001fcd0       0x30 _build/nrf51422_xxac_peer_data_storage.c.o
  .text.pds_evt_send.part.0
-                0x0001fcfc        0x8 _build/nrf51422_xxac_peer_data_storage.c.o
+                0x0001fd00        0x8 _build/nrf51422_xxac_peer_data_storage.c.o
  .text.peer_data_delete
-                0x0001fd04       0x8c _build/nrf51422_xxac_peer_data_storage.c.o
+                0x0001fd08       0x8c _build/nrf51422_xxac_peer_data_storage.c.o
  .text.pds_peer_data_read
-                0x0001fd90       0x6c _build/nrf51422_xxac_peer_data_storage.c.o
-                0x0001fd90                pds_peer_data_read
+                0x0001fd94       0x6c _build/nrf51422_xxac_peer_data_storage.c.o
+                0x0001fd94                pds_peer_data_read
  .text.pds_peer_data_iterate_prepare
-                0x0001fdfc       0x14 _build/nrf51422_xxac_peer_data_storage.c.o
-                0x0001fdfc                pds_peer_data_iterate_prepare
+                0x0001fe00       0x14 _build/nrf51422_xxac_peer_data_storage.c.o
+                0x0001fe00                pds_peer_data_iterate_prepare
  .text.pds_peer_data_iterate
-                0x0001fe10       0x58 _build/nrf51422_xxac_peer_data_storage.c.o
-                0x0001fe10                pds_peer_data_iterate
+                0x0001fe14       0x58 _build/nrf51422_xxac_peer_data_storage.c.o
+                0x0001fe14                pds_peer_data_iterate
  .text.pds_space_reserve
-                0x0001fe68       0x2c _build/nrf51422_xxac_peer_data_storage.c.o
-                0x0001fe68                pds_space_reserve
+                0x0001fe6c       0x2c _build/nrf51422_xxac_peer_data_storage.c.o
+                0x0001fe6c                pds_space_reserve
  .text.pds_space_reserve_cancel
-                0x0001fe94       0x12 _build/nrf51422_xxac_peer_data_storage.c.o
-                0x0001fe94                pds_space_reserve_cancel
- *fill*         0x0001fea6        0x2 
+                0x0001fe98       0x12 _build/nrf51422_xxac_peer_data_storage.c.o
+                0x0001fe98                pds_space_reserve_cancel
+ *fill*         0x0001feaa        0x2 
  .text.pds_peer_data_store
-                0x0001fea8       0xb0 _build/nrf51422_xxac_peer_data_storage.c.o
-                0x0001fea8                pds_peer_data_store
+                0x0001feac       0xb0 _build/nrf51422_xxac_peer_data_storage.c.o
+                0x0001feac                pds_peer_data_store
  .text.pds_peer_id_allocate
-                0x0001ff58       0x10 _build/nrf51422_xxac_peer_data_storage.c.o
-                0x0001ff58                pds_peer_id_allocate
+                0x0001ff5c       0x10 _build/nrf51422_xxac_peer_data_storage.c.o
+                0x0001ff5c                pds_peer_id_allocate
  .text.pds_peer_id_free
-                0x0001ff68       0x16 _build/nrf51422_xxac_peer_data_storage.c.o
-                0x0001ff68                pds_peer_id_free
+                0x0001ff6c       0x16 _build/nrf51422_xxac_peer_data_storage.c.o
+                0x0001ff6c                pds_peer_id_free
  .text.pds_peer_id_is_allocated
-                0x0001ff7e        0x8 _build/nrf51422_xxac_peer_data_storage.c.o
-                0x0001ff7e                pds_peer_id_is_allocated
+                0x0001ff82        0x8 _build/nrf51422_xxac_peer_data_storage.c.o
+                0x0001ff82                pds_peer_id_is_allocated
  .text.pds_next_peer_id_get
-                0x0001ff86        0x8 _build/nrf51422_xxac_peer_data_storage.c.o
-                0x0001ff86                pds_next_peer_id_get
+                0x0001ff8a        0x8 _build/nrf51422_xxac_peer_data_storage.c.o
+                0x0001ff8a                pds_next_peer_id_get
  .text.pds_next_deleted_peer_id_get
-                0x0001ff8e        0x8 _build/nrf51422_xxac_peer_data_storage.c.o
-                0x0001ff8e                pds_next_deleted_peer_id_get
- *fill*         0x0001ff96        0x2 
+                0x0001ff92        0x8 _build/nrf51422_xxac_peer_data_storage.c.o
+                0x0001ff92                pds_next_deleted_peer_id_get
+ *fill*         0x0001ff9a        0x2 
  .text.pdb_evt_send
-                0x0001ff98       0x1c _build/nrf51422_xxac_peer_database.c.o
+                0x0001ff9c       0x1c _build/nrf51422_xxac_peer_database.c.o
  .text.write_buf_length_words_set
-                0x0001ffb4       0x2c _build/nrf51422_xxac_peer_database.c.o
+                0x0001ffb8       0x2c _build/nrf51422_xxac_peer_database.c.o
  .text.write_buffer_record_find
-                0x0001ffe0       0x50 _build/nrf51422_xxac_peer_database.c.o
+                0x0001ffe4       0x50 _build/nrf51422_xxac_peer_database.c.o
  .text.write_buffer_record_release
-                0x00020030       0x40 _build/nrf51422_xxac_peer_database.c.o
+                0x00020034       0x40 _build/nrf51422_xxac_peer_database.c.o
  .text.pdb_peer_allocate
-                0x00020070        0x8 _build/nrf51422_xxac_peer_database.c.o
-                0x00020070                pdb_peer_allocate
+                0x00020074        0x8 _build/nrf51422_xxac_peer_database.c.o
+                0x00020074                pdb_peer_allocate
  .text.pdb_peer_data_ptr_get
-                0x00020078        0xa _build/nrf51422_xxac_peer_database.c.o
-                0x00020078                pdb_peer_data_ptr_get
- *fill*         0x00020082        0x2 
+                0x0002007c        0xa _build/nrf51422_xxac_peer_database.c.o
+                0x0002007c                pdb_peer_data_ptr_get
+ *fill*         0x00020086        0x2 
  .text.pdb_write_buf_get
-                0x00020084      0x12c _build/nrf51422_xxac_peer_database.c.o
-                0x00020084                pdb_write_buf_get
+                0x00020088      0x12c _build/nrf51422_xxac_peer_database.c.o
+                0x00020088                pdb_write_buf_get
  .text.pdb_write_buf_release
-                0x000201b0       0x28 _build/nrf51422_xxac_peer_database.c.o
-                0x000201b0                pdb_write_buf_release
+                0x000201b4       0x28 _build/nrf51422_xxac_peer_database.c.o
+                0x000201b4                pdb_write_buf_release
  .text.pdb_peer_free
-                0x000201d8       0x70 _build/nrf51422_xxac_peer_database.c.o
-                0x000201d8                pdb_peer_free
+                0x000201dc       0x70 _build/nrf51422_xxac_peer_database.c.o
+                0x000201dc                pdb_peer_free
  .text.pdb_write_buf_store_prepare
-                0x00020248       0x68 _build/nrf51422_xxac_peer_database.c.o
-                0x00020248                pdb_write_buf_store_prepare
+                0x0002024c       0x68 _build/nrf51422_xxac_peer_database.c.o
+                0x0002024c                pdb_write_buf_store_prepare
  .text.pdb_write_buf_store
-                0x000202b0       0xd4 _build/nrf51422_xxac_peer_database.c.o
-                0x000202b0                pdb_write_buf_store
+                0x000202b4       0xd4 _build/nrf51422_xxac_peer_database.c.o
+                0x000202b4                pdb_write_buf_store
  .text.pdb_pds_evt_handler
-                0x00020384      0x144 _build/nrf51422_xxac_peer_database.c.o
-                0x00020384                pdb_pds_evt_handler
+                0x00020388      0x144 _build/nrf51422_xxac_peer_database.c.o
+                0x00020388                pdb_pds_evt_handler
  .text.pdb_next_peer_id_get
-                0x000204c8        0x8 _build/nrf51422_xxac_peer_database.c.o
-                0x000204c8                pdb_next_peer_id_get
+                0x000204cc        0x8 _build/nrf51422_xxac_peer_database.c.o
+                0x000204cc                pdb_next_peer_id_get
  .text.pdb_next_deleted_peer_id_get
-                0x000204d0        0x8 _build/nrf51422_xxac_peer_database.c.o
-                0x000204d0                pdb_next_deleted_peer_id_get
+                0x000204d4        0x8 _build/nrf51422_xxac_peer_database.c.o
+                0x000204d4                pdb_next_deleted_peer_id_get
  .text.pdb_raw_store
-                0x000204d8        0xc _build/nrf51422_xxac_peer_database.c.o
-                0x000204d8                pdb_raw_store
- .text.claim    0x000204e4       0x38 _build/nrf51422_xxac_peer_id.c.o
+                0x000204dc        0xc _build/nrf51422_xxac_peer_database.c.o
+                0x000204dc                pdb_raw_store
+ .text.claim    0x000204e8       0x38 _build/nrf51422_xxac_peer_id.c.o
  .text.peer_id_allocate
-                0x0002051c       0x10 _build/nrf51422_xxac_peer_id.c.o
-                0x0002051c                peer_id_allocate
+                0x00020520       0x10 _build/nrf51422_xxac_peer_id.c.o
+                0x00020520                peer_id_allocate
  .text.peer_id_delete
-                0x0002052c       0x28 _build/nrf51422_xxac_peer_id.c.o
-                0x0002052c                peer_id_delete
+                0x00020530       0x28 _build/nrf51422_xxac_peer_id.c.o
+                0x00020530                peer_id_delete
  .text.peer_id_free
-                0x00020554       0x24 _build/nrf51422_xxac_peer_id.c.o
-                0x00020554                peer_id_free
+                0x00020558       0x24 _build/nrf51422_xxac_peer_id.c.o
+                0x00020558                peer_id_free
  .text.peer_id_is_allocated
-                0x00020578       0x18 _build/nrf51422_xxac_peer_id.c.o
-                0x00020578                peer_id_is_allocated
+                0x0002057c       0x18 _build/nrf51422_xxac_peer_id.c.o
+                0x0002057c                peer_id_is_allocated
  .text.peer_id_is_deleted
-                0x00020590       0x18 _build/nrf51422_xxac_peer_id.c.o
-                0x00020590                peer_id_is_deleted
+                0x00020594       0x18 _build/nrf51422_xxac_peer_id.c.o
+                0x00020594                peer_id_is_deleted
  .text.next_id_get
-                0x000205a8       0x30 _build/nrf51422_xxac_peer_id.c.o
-                0x000205a8                next_id_get
+                0x000205ac       0x30 _build/nrf51422_xxac_peer_id.c.o
+                0x000205ac                next_id_get
  .text.peer_id_get_next_used
-                0x000205d8       0x30 _build/nrf51422_xxac_peer_id.c.o
-                0x000205d8                peer_id_get_next_used
+                0x000205dc       0x30 _build/nrf51422_xxac_peer_id.c.o
+                0x000205dc                peer_id_get_next_used
  .text.peer_id_get_next_deleted
-                0x00020608       0x10 _build/nrf51422_xxac_peer_id.c.o
-                0x00020608                peer_id_get_next_deleted
+                0x0002060c       0x10 _build/nrf51422_xxac_peer_id.c.o
+                0x0002060c                peer_id_get_next_deleted
  .text.evt_send
-                0x00020618       0x28 _build/nrf51422_xxac_peer_manager.c.o
+                0x0002061c       0x28 _build/nrf51422_xxac_peer_manager.c.o
  .text.pm_pdb_evt_handler
-                0x00020640      0x17c _build/nrf51422_xxac_peer_manager.c.o
-                0x00020640                pm_pdb_evt_handler
+                0x00020644      0x17c _build/nrf51422_xxac_peer_manager.c.o
+                0x00020644                pm_pdb_evt_handler
  .text.pm_sm_evt_handler
-                0x000207bc      0x13c _build/nrf51422_xxac_peer_manager.c.o
-                0x000207bc                pm_sm_evt_handler
+                0x000207c0      0x13c _build/nrf51422_xxac_peer_manager.c.o
+                0x000207c0                pm_sm_evt_handler
  .text.pm_gcm_evt_handler
-                0x000208f8       0x6e _build/nrf51422_xxac_peer_manager.c.o
-                0x000208f8                pm_gcm_evt_handler
- *fill*         0x00020966        0x2 
+                0x000208fc       0x6e _build/nrf51422_xxac_peer_manager.c.o
+                0x000208fc                pm_gcm_evt_handler
+ *fill*         0x0002096a        0x2 
  .text.pm_on_ble_evt
-                0x00020968       0x24 _build/nrf51422_xxac_peer_manager.c.o
-                0x00020968                pm_on_ble_evt
+                0x0002096c       0x24 _build/nrf51422_xxac_peer_manager.c.o
+                0x0002096c                pm_on_ble_evt
  .text.pm_peer_delete
-                0x0002098c       0x1c _build/nrf51422_xxac_peer_manager.c.o
-                0x0002098c                pm_peer_delete
+                0x00020990       0x1c _build/nrf51422_xxac_peer_manager.c.o
+                0x00020990                pm_peer_delete
  .text.pm_im_evt_handler
-                0x000209a8       0x4c _build/nrf51422_xxac_peer_manager.c.o
-                0x000209a8                pm_im_evt_handler
+                0x000209ac       0x4c _build/nrf51422_xxac_peer_manager.c.o
+                0x000209ac                pm_im_evt_handler
  .text.pm_buffer_ptr_get
-                0x000209f4       0x32 _build/nrf51422_xxac_pm_buffer.c.o
-                0x000209f4                pm_buffer_ptr_get
+                0x000209f8       0x32 _build/nrf51422_xxac_pm_buffer.c.o
+                0x000209f8                pm_buffer_ptr_get
  .text.pm_buffer_release
-                0x00020a26       0x2c _build/nrf51422_xxac_pm_buffer.c.o
-                0x00020a26                pm_buffer_release
+                0x00020a2a       0x2c _build/nrf51422_xxac_pm_buffer.c.o
+                0x00020a2a                pm_buffer_release
  .text.pm_buffer_block_acquire
-                0x00020a52       0x60 _build/nrf51422_xxac_pm_buffer.c.o
-                0x00020a52                pm_buffer_block_acquire
+                0x00020a56       0x60 _build/nrf51422_xxac_pm_buffer.c.o
+                0x00020a56                pm_buffer_block_acquire
  .text.pm_mutex_lock
-                0x00020ab2       0x3e _build/nrf51422_xxac_pm_mutex.c.o
-                0x00020ab2                pm_mutex_lock
+                0x00020ab6       0x3e _build/nrf51422_xxac_pm_mutex.c.o
+                0x00020ab6                pm_mutex_lock
  .text.pm_mutex_unlock
-                0x00020af0       0x36 _build/nrf51422_xxac_pm_mutex.c.o
-                0x00020af0                pm_mutex_unlock
+                0x00020af4       0x36 _build/nrf51422_xxac_pm_mutex.c.o
+                0x00020af4                pm_mutex_unlock
  .text.pm_mutex_lock_first_available
-                0x00020b26       0x64 _build/nrf51422_xxac_pm_mutex.c.o
-                0x00020b26                pm_mutex_lock_first_available
+                0x00020b2a       0x64 _build/nrf51422_xxac_pm_mutex.c.o
+                0x00020b2a                pm_mutex_lock_first_available
  .text.pm_mutex_lock_status_get
-                0x00020b8a       0x1e _build/nrf51422_xxac_pm_mutex.c.o
-                0x00020b8a                pm_mutex_lock_status_get
+                0x00020b8e       0x1e _build/nrf51422_xxac_pm_mutex.c.o
+                0x00020b8e                pm_mutex_lock_status_get
  .text.sd_ble_gap_authenticate
-                0x00020ba8        0x4 _build/nrf51422_xxac_security_dispatcher.c.o
- .text.sd_ble_gap_sec_params_reply
                 0x00020bac        0x4 _build/nrf51422_xxac_security_dispatcher.c.o
- .text.sd_ble_gap_encrypt
+ .text.sd_ble_gap_sec_params_reply
                 0x00020bb0        0x4 _build/nrf51422_xxac_security_dispatcher.c.o
- .text.sd_ble_gap_sec_info_reply
+ .text.sd_ble_gap_encrypt
                 0x00020bb4        0x4 _build/nrf51422_xxac_security_dispatcher.c.o
+ .text.sd_ble_gap_sec_info_reply
+                0x00020bb8        0x4 _build/nrf51422_xxac_security_dispatcher.c.o
  .text.evt_send
-                0x00020bb8       0x10 _build/nrf51422_xxac_security_dispatcher.c.o
+                0x00020bbc       0x10 _build/nrf51422_xxac_security_dispatcher.c.o
  .text.sec_start_send
-                0x00020bc8       0x22 _build/nrf51422_xxac_security_dispatcher.c.o
- *fill*         0x00020bea        0x2 
+                0x00020bcc       0x22 _build/nrf51422_xxac_security_dispatcher.c.o
+ *fill*         0x00020bee        0x2 
  .text.encryption_failure
-                0x00020bec       0x3c _build/nrf51422_xxac_security_dispatcher.c.o
+                0x00020bf0       0x3c _build/nrf51422_xxac_security_dispatcher.c.o
  .text.sec_proc_start
-                0x00020c28       0x58 _build/nrf51422_xxac_security_dispatcher.c.o
+                0x00020c2c       0x58 _build/nrf51422_xxac_security_dispatcher.c.o
  .text.link_secure_failure.part.2
-                0x00020c80       0xa0 _build/nrf51422_xxac_security_dispatcher.c.o
+                0x00020c84       0xa0 _build/nrf51422_xxac_security_dispatcher.c.o
  .text.smd_pdb_evt_handler
-                0x00020d20       0x30 _build/nrf51422_xxac_security_dispatcher.c.o
-                0x00020d20                smd_pdb_evt_handler
+                0x00020d24       0x30 _build/nrf51422_xxac_security_dispatcher.c.o
+                0x00020d24                smd_pdb_evt_handler
  .text.smd_params_reply
-                0x00020d50      0x138 _build/nrf51422_xxac_security_dispatcher.c.o
-                0x00020d50                smd_params_reply
+                0x00020d54      0x138 _build/nrf51422_xxac_security_dispatcher.c.o
+                0x00020d54                smd_params_reply
  .text.smd_link_secure
-                0x00020e88      0x194 _build/nrf51422_xxac_security_dispatcher.c.o
-                0x00020e88                smd_link_secure
+                0x00020e8c      0x194 _build/nrf51422_xxac_security_dispatcher.c.o
+                0x00020e8c                smd_link_secure
  .text.smd_ble_evt_handler
-                0x0002101c      0x250 _build/nrf51422_xxac_security_dispatcher.c.o
-                0x0002101c                smd_ble_evt_handler
+                0x00021020      0x250 _build/nrf51422_xxac_security_dispatcher.c.o
+                0x00021020                smd_ble_evt_handler
  .text.events_send_from_err_code.part.1
-                0x0002126c       0x2e _build/nrf51422_xxac_security_manager.c.o
- *fill*         0x0002129a        0x2 
+                0x00021270       0x2e _build/nrf51422_xxac_security_manager.c.o
+ *fill*         0x0002129e        0x2 
  .text.link_secure
-                0x0002129c       0xf0 _build/nrf51422_xxac_security_manager.c.o
+                0x000212a0       0xf0 _build/nrf51422_xxac_security_manager.c.o
  .text.link_secure_pending_process
-                0x0002138c       0x64 _build/nrf51422_xxac_security_manager.c.o
+                0x00021390       0x64 _build/nrf51422_xxac_security_manager.c.o
  .text.smd_params_reply_perform
-                0x000213f0       0xf8 _build/nrf51422_xxac_security_manager.c.o
+                0x000213f4       0xf8 _build/nrf51422_xxac_security_manager.c.o
  .text.params_reply_pending_process.part.2
-                0x000214e8       0x36 _build/nrf51422_xxac_security_manager.c.o
- *fill*         0x0002151e        0x2 
+                0x000214ec       0x36 _build/nrf51422_xxac_security_manager.c.o
+ *fill*         0x00021522        0x2 
  .text.sm_smd_evt_handler
-                0x00021520       0x74 _build/nrf51422_xxac_security_manager.c.o
-                0x00021520                sm_smd_evt_handler
+                0x00021524       0x74 _build/nrf51422_xxac_security_manager.c.o
+                0x00021524                sm_smd_evt_handler
  .text.sm_pdb_evt_handler
-                0x00021594       0x58 _build/nrf51422_xxac_security_manager.c.o
-                0x00021594                sm_pdb_evt_handler
+                0x00021598       0x58 _build/nrf51422_xxac_security_manager.c.o
+                0x00021598                sm_pdb_evt_handler
  .text.sm_ble_evt_handler
-                0x000215ec       0x14 _build/nrf51422_xxac_security_manager.c.o
-                0x000215ec                sm_ble_evt_handler
- .text          0x00021600       0x4c _build/nrf51422_xxac_gcc_startup_nrf51.S.o
-                0x00021600                Reset_Handler
-                0x00021640                NMI_Handler
-                0x00021642                HardFault_Handler
-                0x00021644                SVC_Handler
-                0x00021646                PendSV_Handler
-                0x00021648                SysTick_Handler
-                0x0002164a                POWER_CLOCK_IRQHandler
-                0x0002164a                RTC0_IRQHandler
-                0x0002164a                LPCOMP_IRQHandler
-                0x0002164a                SWI4_IRQHandler
-                0x0002164a                TEMP_IRQHandler
-                0x0002164a                QDEC_IRQHandler
-                0x0002164a                SWI5_IRQHandler
-                0x0002164a                TIMER0_IRQHandler
-                0x0002164a                RADIO_IRQHandler
-                0x0002164a                TIMER1_IRQHandler
-                0x0002164a                ECB_IRQHandler
-                0x0002164a                Default_Handler
-                0x0002164a                SWI3_IRQHandler
-                0x0002164a                CCM_AAR_IRQHandler
-                0x0002164a                WDT_IRQHandler
-                0x0002164a                TIMER2_IRQHandler
-                0x0002164a                RNG_IRQHandler
-                0x0002164a                SPI1_TWI1_IRQHandler
-                0x0002164a                SWI1_IRQHandler
+                0x000215f0       0x14 _build/nrf51422_xxac_security_manager.c.o
+                0x000215f0                sm_ble_evt_handler
+ .text          0x00021604       0x4c _build/nrf51422_xxac_gcc_startup_nrf51.S.o
+                0x00021604                Reset_Handler
+                0x00021644                NMI_Handler
+                0x00021646                HardFault_Handler
+                0x00021648                SVC_Handler
+                0x0002164a                PendSV_Handler
+                0x0002164c                SysTick_Handler
+                0x0002164e                POWER_CLOCK_IRQHandler
+                0x0002164e                RTC0_IRQHandler
+                0x0002164e                LPCOMP_IRQHandler
+                0x0002164e                SWI4_IRQHandler
+                0x0002164e                TEMP_IRQHandler
+                0x0002164e                QDEC_IRQHandler
+                0x0002164e                SWI5_IRQHandler
+                0x0002164e                TIMER0_IRQHandler
+                0x0002164e                RADIO_IRQHandler
+                0x0002164e                TIMER1_IRQHandler
+                0x0002164e                ECB_IRQHandler
+                0x0002164e                Default_Handler
+                0x0002164e                SWI3_IRQHandler
+                0x0002164e                CCM_AAR_IRQHandler
+                0x0002164e                WDT_IRQHandler
+                0x0002164e                TIMER2_IRQHandler
+                0x0002164e                RNG_IRQHandler
+                0x0002164e                SPI1_TWI1_IRQHandler
+                0x0002164e                SWI1_IRQHandler
  .text.SystemInit
-                0x0002164c       0xd8 _build/nrf51422_xxac_system_nrf51.c.o
-                0x0002164c                SystemInit
+                0x00021650       0xd8 _build/nrf51422_xxac_system_nrf51.c.o
+                0x00021650                SystemInit
  .text.sd_ble_gatts_service_add
-                0x00021724        0x4 _build/nrf51422_xxac_ble_bas.c.o
- .text.sd_ble_gatts_characteristic_add
                 0x00021728        0x4 _build/nrf51422_xxac_ble_bas.c.o
- .text.sd_ble_gatts_descriptor_add
+ .text.sd_ble_gatts_characteristic_add
                 0x0002172c        0x4 _build/nrf51422_xxac_ble_bas.c.o
- .text.sd_ble_gatts_value_set
+ .text.sd_ble_gatts_descriptor_add
                 0x00021730        0x4 _build/nrf51422_xxac_ble_bas.c.o
- .text.sd_ble_gatts_hvx
+ .text.sd_ble_gatts_value_set
                 0x00021734        0x4 _build/nrf51422_xxac_ble_bas.c.o
- .text.ble_bas_on_ble_evt
-                0x00021738       0x56 _build/nrf51422_xxac_ble_bas.c.o
-                0x00021738                ble_bas_on_ble_evt
- *fill*         0x0002178e        0x2 
- .text.ble_bas_init
-                0x00021790      0x174 _build/nrf51422_xxac_ble_bas.c.o
-                0x00021790                ble_bas_init
- .text.ble_bas_battery_level_update
-                0x00021904       0x7c _build/nrf51422_xxac_ble_bas.c.o
-                0x00021904                ble_bas_battery_level_update
- .text.sd_ble_gatts_service_add
-                0x00021980        0x4 _build/nrf51422_xxac_ble_dis.c.o
- .text.sd_ble_gatts_characteristic_add
-                0x00021984        0x4 _build/nrf51422_xxac_ble_dis.c.o
- .text.char_add
-                0x00021988       0xa4 _build/nrf51422_xxac_ble_dis.c.o
- .text.ble_dis_init
-                0x00021a2c      0x1a8 _build/nrf51422_xxac_ble_dis.c.o
-                0x00021a2c                ble_dis_init
- .text.sd_ble_gatts_service_add
-                0x00021bd4        0x4 _build/nrf51422_xxac_ble_hrs.c.o
- .text.sd_ble_gatts_characteristic_add
-                0x00021bd8        0x4 _build/nrf51422_xxac_ble_hrs.c.o
  .text.sd_ble_gatts_hvx
-                0x00021bdc        0x4 _build/nrf51422_xxac_ble_hrs.c.o
+                0x00021738        0x4 _build/nrf51422_xxac_ble_bas.c.o
+ .text.ble_bas_on_ble_evt
+                0x0002173c       0x56 _build/nrf51422_xxac_ble_bas.c.o
+                0x0002173c                ble_bas_on_ble_evt
+ *fill*         0x00021792        0x2 
+ .text.ble_bas_init
+                0x00021794      0x174 _build/nrf51422_xxac_ble_bas.c.o
+                0x00021794                ble_bas_init
+ .text.ble_bas_battery_level_update
+                0x00021908       0x74 _build/nrf51422_xxac_ble_bas.c.o
+                0x00021908                ble_bas_battery_level_update
+ .text.sd_ble_gatts_service_add
+                0x0002197c        0x4 _build/nrf51422_xxac_ble_dis.c.o
+ .text.sd_ble_gatts_characteristic_add
+                0x00021980        0x4 _build/nrf51422_xxac_ble_dis.c.o
+ .text.char_add
+                0x00021984       0xa4 _build/nrf51422_xxac_ble_dis.c.o
+ .text.ble_dis_init
+                0x00021a28      0x1a8 _build/nrf51422_xxac_ble_dis.c.o
+                0x00021a28                ble_dis_init
+ .text.sd_ble_gatts_service_add
+                0x00021bd0        0x4 _build/nrf51422_xxac_ble_hrs.c.o
+ .text.sd_ble_gatts_characteristic_add
+                0x00021bd4        0x4 _build/nrf51422_xxac_ble_hrs.c.o
+ .text.sd_ble_gatts_hvx
+                0x00021bd8        0x4 _build/nrf51422_xxac_ble_hrs.c.o
  .text.hrm_encode
-                0x00021be0       0xa2 _build/nrf51422_xxac_ble_hrs.c.o
+                0x00021bdc       0xa2 _build/nrf51422_xxac_ble_hrs.c.o
  .text.ble_hrs_on_ble_evt
-                0x00021c82       0x4a _build/nrf51422_xxac_ble_hrs.c.o
-                0x00021c82                ble_hrs_on_ble_evt
+                0x00021c7e       0x4a _build/nrf51422_xxac_ble_hrs.c.o
+                0x00021c7e                ble_hrs_on_ble_evt
  .text.ble_hrs_init
-                0x00021ccc      0x178 _build/nrf51422_xxac_ble_hrs.c.o
-                0x00021ccc                ble_hrs_init
+                0x00021cc8      0x178 _build/nrf51422_xxac_ble_hrs.c.o
+                0x00021cc8                ble_hrs_init
  .text.ble_hrs_heart_rate_measurement_send
-                0x00021e44       0x60 _build/nrf51422_xxac_ble_hrs.c.o
-                0x00021e44                ble_hrs_heart_rate_measurement_send
+                0x00021e40       0x60 _build/nrf51422_xxac_ble_hrs.c.o
+                0x00021e40                ble_hrs_heart_rate_measurement_send
  .text.ble_hrs_rr_interval_add
-                0x00021ea4       0x30 _build/nrf51422_xxac_ble_hrs.c.o
-                0x00021ea4                ble_hrs_rr_interval_add
+                0x00021ea0       0x30 _build/nrf51422_xxac_ble_hrs.c.o
+                0x00021ea0                ble_hrs_rr_interval_add
  .text.ble_hrs_on_gatt_evt
-                0x00021ed4       0x12 _build/nrf51422_xxac_ble_hrs.c.o
-                0x00021ed4                ble_hrs_on_gatt_evt
+                0x00021ed0       0x12 _build/nrf51422_xxac_ble_hrs.c.o
+                0x00021ed0                ble_hrs_on_gatt_evt
  .text.sd_evt_get
-                0x00021ee6        0x4 _build/nrf51422_xxac_softdevice_handler.c.o
+                0x00021ee2        0x4 _build/nrf51422_xxac_softdevice_handler.c.o
  .text.sd_softdevice_enable
-                0x00021eea        0x4 _build/nrf51422_xxac_softdevice_handler.c.o
+                0x00021ee6        0x4 _build/nrf51422_xxac_softdevice_handler.c.o
  .text.sd_ble_enable
-                0x00021eee        0x4 _build/nrf51422_xxac_softdevice_handler.c.o
+                0x00021eea        0x4 _build/nrf51422_xxac_softdevice_handler.c.o
  .text.sd_ble_evt_get
-                0x00021ef2        0x4 _build/nrf51422_xxac_softdevice_handler.c.o
+                0x00021eee        0x4 _build/nrf51422_xxac_softdevice_handler.c.o
  .text.softdevice_fault_handler
-                0x00021ef6        0x8 _build/nrf51422_xxac_softdevice_handler.c.o
-                0x00021ef6                softdevice_fault_handler
- *fill*         0x00021efe        0x2 
+                0x00021ef2        0x8 _build/nrf51422_xxac_softdevice_handler.c.o
+                0x00021ef2                softdevice_fault_handler
+ *fill*         0x00021efa        0x2 
  .text.sd_nvic_EnableIRQ.constprop.4
-                0x00021f00       0x38 _build/nrf51422_xxac_softdevice_handler.c.o
+                0x00021efc       0x38 _build/nrf51422_xxac_softdevice_handler.c.o
  .text.intern_softdevice_events_execute
-                0x00021f38       0xac _build/nrf51422_xxac_softdevice_handler.c.o
-                0x00021f38                intern_softdevice_events_execute
+                0x00021f34       0xac _build/nrf51422_xxac_softdevice_handler.c.o
+                0x00021f34                intern_softdevice_events_execute
  .text.softdevice_handler_init
-                0x00021fe4       0x48 _build/nrf51422_xxac_softdevice_handler.c.o
-                0x00021fe4                softdevice_handler_init
+                0x00021fe0       0x48 _build/nrf51422_xxac_softdevice_handler.c.o
+                0x00021fe0                softdevice_handler_init
  .text.softdevice_ble_evt_handler_set
-                0x0002202c       0x14 _build/nrf51422_xxac_softdevice_handler.c.o
-                0x0002202c                softdevice_ble_evt_handler_set
+                0x00022028       0x14 _build/nrf51422_xxac_softdevice_handler.c.o
+                0x00022028                softdevice_ble_evt_handler_set
  .text.softdevice_sys_evt_handler_set
-                0x00022040       0x14 _build/nrf51422_xxac_softdevice_handler.c.o
-                0x00022040                softdevice_sys_evt_handler_set
+                0x0002203c       0x14 _build/nrf51422_xxac_softdevice_handler.c.o
+                0x0002203c                softdevice_sys_evt_handler_set
  .text.SWI2_IRQHandler
-                0x00022054       0x20 _build/nrf51422_xxac_softdevice_handler.c.o
-                0x00022054                SWI2_IRQHandler
+                0x00022050       0x20 _build/nrf51422_xxac_softdevice_handler.c.o
+                0x00022050                SWI2_IRQHandler
  .text.softdevice_enable_get_default_config
-                0x00022074       0x2e _build/nrf51422_xxac_softdevice_handler.c.o
-                0x00022074                softdevice_enable_get_default_config
- *fill*         0x000220a2        0x2 
+                0x00022070       0x2e _build/nrf51422_xxac_softdevice_handler.c.o
+                0x00022070                softdevice_enable_get_default_config
+ *fill*         0x0002209e        0x2 
  .text.softdevice_enable
-                0x000220a4       0x18 _build/nrf51422_xxac_softdevice_handler.c.o
-                0x000220a4                softdevice_enable
- .text          0x000220bc       0x14 c:/program files (x86)/gnu tools arm embedded/8 2019-q3-update/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp\libgcc.a(_thumb1_case_sqi.o)
-                0x000220bc                __gnu_thumb1_case_sqi
- .text          0x000220d0       0x14 c:/program files (x86)/gnu tools arm embedded/8 2019-q3-update/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp\libgcc.a(_thumb1_case_uqi.o)
-                0x000220d0                __gnu_thumb1_case_uqi
- .text          0x000220e4       0x14 c:/program files (x86)/gnu tools arm embedded/8 2019-q3-update/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp\libgcc.a(_thumb1_case_uhi.o)
-                0x000220e4                __gnu_thumb1_case_uhi
- .text          0x000220f8      0x114 c:/program files (x86)/gnu tools arm embedded/8 2019-q3-update/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp\libgcc.a(_udivsi3.o)
-                0x000220f8                __aeabi_uidiv
-                0x000220f8                __udivsi3
-                0x00022204                __aeabi_uidivmod
- .text          0x0002220c      0x1d4 c:/program files (x86)/gnu tools arm embedded/8 2019-q3-update/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp\libgcc.a(_divsi3.o)
-                0x0002220c                __divsi3
-                0x0002220c                __aeabi_idiv
-                0x000223d8                __aeabi_idivmod
- .text          0x000223e0        0x4 c:/program files (x86)/gnu tools arm embedded/8 2019-q3-update/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp\libgcc.a(_dvmd_tls.o)
-                0x000223e0                __aeabi_idiv0
-                0x000223e0                __aeabi_ldiv0
- .text          0x000223e4       0x30 c:/program files (x86)/gnu tools arm embedded/8 2019-q3-update/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp\libgcc.a(_fixunssfsi.o)
-                0x000223e4                __fixunssfsi
-                0x000223e4                __aeabi_f2uiz
- .text          0x00022414      0x22c c:/program files (x86)/gnu tools arm embedded/8 2019-q3-update/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp\libgcc.a(mulsf3.o)
-                0x00022414                __aeabi_fmul
- .text          0x00022640      0x348 c:/program files (x86)/gnu tools arm embedded/8 2019-q3-update/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp\libgcc.a(subsf3.o)
-                0x00022640                __aeabi_fsub
- .text          0x00022988       0x40 c:/program files (x86)/gnu tools arm embedded/8 2019-q3-update/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp\libgcc.a(fixsfsi.o)
-                0x00022988                __aeabi_f2iz
- .text          0x000229c8      0x4e4 c:/program files (x86)/gnu tools arm embedded/8 2019-q3-update/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp\libgcc.a(muldf3.o)
-                0x000229c8                __aeabi_dmul
- .text          0x00022eac      0x738 c:/program files (x86)/gnu tools arm embedded/8 2019-q3-update/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp\libgcc.a(subdf3.o)
-                0x00022eac                __aeabi_dsub
- .text          0x000235e4       0x78 c:/program files (x86)/gnu tools arm embedded/8 2019-q3-update/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp\libgcc.a(floatsidf.o)
-                0x000235e4                __aeabi_i2d
- .text          0x0002365c      0x110 c:/program files (x86)/gnu tools arm embedded/8 2019-q3-update/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp\libgcc.a(truncdfsf2.o)
-                0x0002365c                __aeabi_d2f
- .text          0x0002376c       0x74 c:/program files (x86)/gnu tools arm embedded/8 2019-q3-update/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp\libgcc.a(_arm_cmpsf2.o)
-                0x0002376c                __aeabi_cfrcmple
-                0x00023774                __aeabi_cfcmpeq
-                0x00023774                __aeabi_cfcmple
-                0x00023784                __aeabi_fcmpeq
-                0x00023790                __aeabi_fcmplt
-                0x000237a4                __aeabi_fcmple
-                0x000237b8                __aeabi_fcmpgt
-                0x000237cc                __aeabi_fcmpge
- .text          0x000237e0       0x3c c:/program files (x86)/gnu tools arm embedded/8 2019-q3-update/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp\libgcc.a(_clzsi2.o)
-                0x000237e0                __clzsi2
- .text          0x0002381c       0x50 c:/program files (x86)/gnu tools arm embedded/8 2019-q3-update/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp\libgcc.a(eqsf2.o)
-                0x0002381c                __eqsf2
-                0x0002381c                __nesf2
- .text          0x0002386c       0x98 c:/program files (x86)/gnu tools arm embedded/8 2019-q3-update/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp\libgcc.a(gesf2.o)
-                0x0002386c                __gesf2
-                0x0002386c                __gtsf2
- .text          0x00023904       0x94 c:/program files (x86)/gnu tools arm embedded/8 2019-q3-update/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp\libgcc.a(lesf2.o)
-                0x00023904                __ltsf2
-                0x00023904                __lesf2
- .text.memcmp   0x00023998       0x1c c:/program files (x86)/gnu tools arm embedded/8 2019-q3-update/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-memcmp.o)
-                0x00023998                memcmp
- .text.memcpy   0x000239b4       0x12 c:/program files (x86)/gnu tools arm embedded/8 2019-q3-update/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-memcpy-stub.o)
-                0x000239b4                memcpy
- .text.memmove  0x000239c6       0x26 c:/program files (x86)/gnu tools arm embedded/8 2019-q3-update/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-memmove.o)
-                0x000239c6                memmove
- .text          0x000239ec        0xe c:/program files (x86)/gnu tools arm embedded/8 2019-q3-update/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-strlen.o)
-                0x000239ec                strlen
+                0x000220a0       0x18 _build/nrf51422_xxac_softdevice_handler.c.o
+                0x000220a0                softdevice_enable
+ .text          0x000220b8       0x14 c:/program files (x86)/gnu tools arm embedded/8 2019-q3-update/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp\libgcc.a(_thumb1_case_sqi.o)
+                0x000220b8                __gnu_thumb1_case_sqi
+ .text          0x000220cc       0x14 c:/program files (x86)/gnu tools arm embedded/8 2019-q3-update/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp\libgcc.a(_thumb1_case_uqi.o)
+                0x000220cc                __gnu_thumb1_case_uqi
+ .text          0x000220e0       0x14 c:/program files (x86)/gnu tools arm embedded/8 2019-q3-update/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp\libgcc.a(_thumb1_case_uhi.o)
+                0x000220e0                __gnu_thumb1_case_uhi
+ .text          0x000220f4      0x114 c:/program files (x86)/gnu tools arm embedded/8 2019-q3-update/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp\libgcc.a(_udivsi3.o)
+                0x000220f4                __aeabi_uidiv
+                0x000220f4                __udivsi3
+                0x00022200                __aeabi_uidivmod
+ .text          0x00022208      0x1d4 c:/program files (x86)/gnu tools arm embedded/8 2019-q3-update/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp\libgcc.a(_divsi3.o)
+                0x00022208                __divsi3
+                0x00022208                __aeabi_idiv
+                0x000223d4                __aeabi_idivmod
+ .text          0x000223dc        0x4 c:/program files (x86)/gnu tools arm embedded/8 2019-q3-update/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp\libgcc.a(_dvmd_tls.o)
+                0x000223dc                __aeabi_idiv0
+                0x000223dc                __aeabi_ldiv0
+ .text          0x000223e0       0x30 c:/program files (x86)/gnu tools arm embedded/8 2019-q3-update/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp\libgcc.a(_fixunssfsi.o)
+                0x000223e0                __fixunssfsi
+                0x000223e0                __aeabi_f2uiz
+ .text          0x00022410      0x22c c:/program files (x86)/gnu tools arm embedded/8 2019-q3-update/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp\libgcc.a(mulsf3.o)
+                0x00022410                __aeabi_fmul
+ .text          0x0002263c      0x348 c:/program files (x86)/gnu tools arm embedded/8 2019-q3-update/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp\libgcc.a(subsf3.o)
+                0x0002263c                __aeabi_fsub
+ .text          0x00022984       0x40 c:/program files (x86)/gnu tools arm embedded/8 2019-q3-update/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp\libgcc.a(fixsfsi.o)
+                0x00022984                __aeabi_f2iz
+ .text          0x000229c4      0x4e4 c:/program files (x86)/gnu tools arm embedded/8 2019-q3-update/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp\libgcc.a(muldf3.o)
+                0x000229c4                __aeabi_dmul
+ .text          0x00022ea8      0x738 c:/program files (x86)/gnu tools arm embedded/8 2019-q3-update/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp\libgcc.a(subdf3.o)
+                0x00022ea8                __aeabi_dsub
+ .text          0x000235e0       0x78 c:/program files (x86)/gnu tools arm embedded/8 2019-q3-update/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp\libgcc.a(floatsidf.o)
+                0x000235e0                __aeabi_i2d
+ .text          0x00023658      0x110 c:/program files (x86)/gnu tools arm embedded/8 2019-q3-update/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp\libgcc.a(truncdfsf2.o)
+                0x00023658                __aeabi_d2f
+ .text          0x00023768       0x74 c:/program files (x86)/gnu tools arm embedded/8 2019-q3-update/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp\libgcc.a(_arm_cmpsf2.o)
+                0x00023768                __aeabi_cfrcmple
+                0x00023770                __aeabi_cfcmpeq
+                0x00023770                __aeabi_cfcmple
+                0x00023780                __aeabi_fcmpeq
+                0x0002378c                __aeabi_fcmplt
+                0x000237a0                __aeabi_fcmple
+                0x000237b4                __aeabi_fcmpgt
+                0x000237c8                __aeabi_fcmpge
+ .text          0x000237dc       0x3c c:/program files (x86)/gnu tools arm embedded/8 2019-q3-update/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp\libgcc.a(_clzsi2.o)
+                0x000237dc                __clzsi2
+ .text          0x00023818       0x50 c:/program files (x86)/gnu tools arm embedded/8 2019-q3-update/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp\libgcc.a(eqsf2.o)
+                0x00023818                __eqsf2
+                0x00023818                __nesf2
+ .text          0x00023868       0x98 c:/program files (x86)/gnu tools arm embedded/8 2019-q3-update/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp\libgcc.a(gesf2.o)
+                0x00023868                __gesf2
+                0x00023868                __gtsf2
+ .text          0x00023900       0x94 c:/program files (x86)/gnu tools arm embedded/8 2019-q3-update/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp\libgcc.a(lesf2.o)
+                0x00023900                __ltsf2
+                0x00023900                __lesf2
+ .text.memcmp   0x00023994       0x1c c:/program files (x86)/gnu tools arm embedded/8 2019-q3-update/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-memcmp.o)
+                0x00023994                memcmp
+ .text.memcpy   0x000239b0       0x12 c:/program files (x86)/gnu tools arm embedded/8 2019-q3-update/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-memcpy-stub.o)
+                0x000239b0                memcpy
+ .text.memmove  0x000239c2       0x26 c:/program files (x86)/gnu tools arm embedded/8 2019-q3-update/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-memmove.o)
+                0x000239c2                memmove
+ .text          0x000239e8        0xe c:/program files (x86)/gnu tools arm embedded/8 2019-q3-update/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-strlen.o)
+                0x000239e8                strlen
  *(.init)
- *fill*         0x000239fa        0x2 
- .init          0x000239fc        0x4 c:/program files (x86)/gnu tools arm embedded/8 2019-q3-update/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp/crti.o
-                0x000239fc                _init
- .init          0x00023a00        0x8 c:/program files (x86)/gnu tools arm embedded/8 2019-q3-update/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp/crtn.o
+ *fill*         0x000239f6        0x2 
+ .init          0x000239f8        0x4 c:/program files (x86)/gnu tools arm embedded/8 2019-q3-update/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp/crti.o
+                0x000239f8                _init
+ .init          0x000239fc        0x8 c:/program files (x86)/gnu tools arm embedded/8 2019-q3-update/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp/crtn.o
  *(.fini)
- .fini          0x00023a08        0x4 c:/program files (x86)/gnu tools arm embedded/8 2019-q3-update/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp/crti.o
-                0x00023a08                _fini
- .fini          0x00023a0c        0x8 c:/program files (x86)/gnu tools arm embedded/8 2019-q3-update/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp/crtn.o
+ .fini          0x00023a04        0x4 c:/program files (x86)/gnu tools arm embedded/8 2019-q3-update/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp/crti.o
+                0x00023a04                _fini
+ .fini          0x00023a08        0x8 c:/program files (x86)/gnu tools arm embedded/8 2019-q3-update/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp/crtn.o
  *crtbegin.o(.ctors)
  *crtbegin?.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o *crtend?.o) .ctors)
@@ -7922,80 +7922,80 @@ Linker script and memory map
  *(.dtors)
  *(.rodata*)
  .rodata._global_impure_ptr
-                0x00023a14        0x4 c:/program files (x86)/gnu tools arm embedded/8 2019-q3-update/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-impure.o)
-                0x00023a14                _global_impure_ptr
+                0x00023a10        0x4 c:/program files (x86)/gnu tools arm embedded/8 2019-q3-update/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-impure.o)
+                0x00023a10                _global_impure_ptr
  .rodata.m_fds_tl_dirty
-                0x00023a18        0x4 _build/nrf51422_xxac_fds.c.o
+                0x00023a14        0x4 _build/nrf51422_xxac_fds.c.o
  .rodata.page_tag_data.6329
-                0x00023a1c        0x8 _build/nrf51422_xxac_fds.c.o
+                0x00023a18        0x8 _build/nrf51422_xxac_fds.c.o
  .rodata.page_tag_swap.6325
-                0x00023a24        0x8 _build/nrf51422_xxac_fds.c.o
+                0x00023a20        0x8 _build/nrf51422_xxac_fds.c.o
  .rodata.m_board_btn_list
-                0x00023a2c        0x4 _build/nrf51422_xxac_boards.c.o
+                0x00023a28        0x4 _build/nrf51422_xxac_boards.c.o
  .rodata.m_board_led_list
-                0x00023a30        0x4 _build/nrf51422_xxac_boards.c.o
+                0x00023a2c        0x4 _build/nrf51422_xxac_boards.c.o
  .rodata.m_twi_sht3x
-                0x00023a34        0x8 _build/nrf51422_xxac_cpt_sht3x_data.c.o
+                0x00023a30        0x8 _build/nrf51422_xxac_cpt_sht3x_data.c.o
  .rodata.m_default_config
-                0x00023a3c        0x1 _build/nrf51422_xxac_hal_drv_adc.c.o
+                0x00023a38        0x1 _build/nrf51422_xxac_hal_drv_adc.c.o
  .rodata.ble_init.str1.1
-                0x00023a3d       0x1a _build/nrf51422_xxac_ble_interface.c.o
- *fill*         0x00023a57        0x1 
+                0x00023a39       0x1a _build/nrf51422_xxac_ble_interface.c.o
+ *fill*         0x00023a53        0x1 
  .rodata.m_battery_timer_id
-                0x00023a58        0x4 _build/nrf51422_xxac_ble_interface.c.o
+                0x00023a54        0x4 _build/nrf51422_xxac_ble_interface.c.o
  .rodata.m_heart_rate_timer_id
-                0x00023a5c        0x4 _build/nrf51422_xxac_ble_interface.c.o
+                0x00023a58        0x4 _build/nrf51422_xxac_ble_interface.c.o
  .rodata.m_rr_interval_timer_id
-                0x00023a60        0x4 _build/nrf51422_xxac_ble_interface.c.o
+                0x00023a5c        0x4 _build/nrf51422_xxac_ble_interface.c.o
  .rodata.m_sensor_contact_timer_id
-                0x00023a64        0x4 _build/nrf51422_xxac_ble_interface.c.o
+                0x00023a60        0x4 _build/nrf51422_xxac_ble_interface.c.o
  .rodata.m_conn_params_timer_id
-                0x00023a68        0x4 _build/nrf51422_xxac_ble_conn_params.c.o
- .rodata        0x00023a6c       0x10 _build/nrf51422_xxac_gatts_cache_manager.c.o
+                0x00023a64        0x4 _build/nrf51422_xxac_ble_conn_params.c.o
+ .rodata        0x00023a68       0x10 _build/nrf51422_xxac_gatts_cache_manager.c.o
  .rodata.service_changed_pending.7200
-                0x00023a7c        0x4 _build/nrf51422_xxac_gatts_cache_manager.c.o
+                0x00023a78        0x4 _build/nrf51422_xxac_gatts_cache_manager.c.o
  .rodata.service_changed_pending.7263
-                0x00023a80        0x4 _build/nrf51422_xxac_gatts_cache_manager.c.o
+                0x00023a7c        0x4 _build/nrf51422_xxac_gatts_cache_manager.c.o
  .rodata.CSWTCH.10
-                0x00023a84        0xa _build/nrf51422_xxac_peer_data_storage.c.o
- *fill*         0x00023a8e        0x2 
+                0x00023a80        0xa _build/nrf51422_xxac_peer_data_storage.c.o
+ *fill*         0x00023a8a        0x2 
  .rodata.m_evt_handlers
-                0x00023a90       0x14 _build/nrf51422_xxac_peer_database.c.o
- .rodata        0x00023aa4       0x40 c:/program files (x86)/gnu tools arm embedded/8 2019-q3-update/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp\libgcc.a(mulsf3.o)
- .rodata        0x00023ae4       0x40 c:/program files (x86)/gnu tools arm embedded/8 2019-q3-update/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp\libgcc.a(muldf3.o)
+                0x00023a8c       0x14 _build/nrf51422_xxac_peer_database.c.o
+ .rodata        0x00023aa0       0x40 c:/program files (x86)/gnu tools arm embedded/8 2019-q3-update/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp\libgcc.a(mulsf3.o)
+ .rodata        0x00023ae0       0x40 c:/program files (x86)/gnu tools arm embedded/8 2019-q3-update/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp\libgcc.a(muldf3.o)
  *(.eh_frame*)
- .eh_frame      0x00023b24        0x0 c:/program files (x86)/gnu tools arm embedded/8 2019-q3-update/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp/crtbegin.o
- .eh_frame      0x00023b24        0x4 c:/program files (x86)/gnu tools arm embedded/8 2019-q3-update/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp/crtend.o
+ .eh_frame      0x00023b20        0x0 c:/program files (x86)/gnu tools arm embedded/8 2019-q3-update/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp/crtbegin.o
+ .eh_frame      0x00023b20        0x4 c:/program files (x86)/gnu tools arm embedded/8 2019-q3-update/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp/crtend.o
 
-.glue_7         0x00023b28        0x0
- .glue_7        0x00023b28        0x0 linker stubs
+.glue_7         0x00023b24        0x0
+ .glue_7        0x00023b24        0x0 linker stubs
 
-.glue_7t        0x00023b28        0x0
- .glue_7t       0x00023b28        0x0 linker stubs
+.glue_7t        0x00023b24        0x0
+ .glue_7t       0x00023b24        0x0 linker stubs
 
-.vfp11_veneer   0x00023b28        0x0
- .vfp11_veneer  0x00023b28        0x0 linker stubs
+.vfp11_veneer   0x00023b24        0x0
+ .vfp11_veneer  0x00023b24        0x0 linker stubs
 
-.v4_bx          0x00023b28        0x0
- .v4_bx         0x00023b28        0x0 linker stubs
+.v4_bx          0x00023b24        0x0
+ .v4_bx         0x00023b24        0x0 linker stubs
 
-.iplt           0x00023b28        0x0
- .iplt          0x00023b28        0x0 c:/program files (x86)/gnu tools arm embedded/8 2019-q3-update/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp/crtbegin.o
+.iplt           0x00023b24        0x0
+ .iplt          0x00023b24        0x0 c:/program files (x86)/gnu tools arm embedded/8 2019-q3-update/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp/crtbegin.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x00023b28                __exidx_start = .
+                0x00023b24                __exidx_start = .
 
-.ARM.exidx      0x00023b28        0x8
+.ARM.exidx      0x00023b24        0x8
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
- .ARM.exidx     0x00023b28        0x8 c:/program files (x86)/gnu tools arm embedded/8 2019-q3-update/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/crt0.o
-                0x00023b30                __exidx_end = .
-                0x00023b30                __etext = .
+ .ARM.exidx     0x00023b24        0x8 c:/program files (x86)/gnu tools arm embedded/8 2019-q3-update/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/crt0.o
+                0x00023b2c                __exidx_end = .
+                0x00023b2c                __etext = .
 
-.rel.dyn        0x00023b30        0x0
- .rel.iplt      0x00023b30        0x0 c:/program files (x86)/gnu tools arm embedded/8 2019-q3-update/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp/crtbegin.o
+.rel.dyn        0x00023b2c        0x0
+ .rel.iplt      0x00023b2c        0x0 c:/program files (x86)/gnu tools arm embedded/8 2019-q3-update/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp/crtbegin.o
 
-.data           0x20001fe8       0xa0 load address 0x00023b30
+.data           0x20001fe8       0xa0 load address 0x00023b2c
                 0x20001fe8                __data_start__ = .
  *(vtable)
  *(.data*)
@@ -8138,10 +8138,10 @@ LOAD c:/program files (x86)/gnu tools arm embedded/8 2019-q3-update/bin/../lib/g
 LOAD c:/program files (x86)/gnu tools arm embedded/8 2019-q3-update/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libnosys.a
 END GROUP
 
-.igot.plt       0x20002088        0x0 load address 0x00023bd0
+.igot.plt       0x20002088        0x0 load address 0x00023bcc
  .igot.plt      0x20002088        0x0 c:/program files (x86)/gnu tools arm embedded/8 2019-q3-update/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp/crtbegin.o
 
-.fs_data        0x20002088       0x10 load address 0x00023bd0
+.fs_data        0x20002088       0x10 load address 0x00023bcc
                 0x20002088                PROVIDE (__start_fs_data = .)
  *(.fs_data)
  .fs_data       0x20002088       0x10 _build/nrf51422_xxac_fds.c.o
@@ -8152,7 +8152,7 @@ END GROUP
  *(.pwr_mgmt_data)
                 [!provide]                PROVIDE (__stop_pwr_mgmt_data = .)
 
-.bss            0x20002098      0xa10 load address 0x00023be0
+.bss            0x20002098      0xa10 load address 0x00023bdc
                 0x20002098                . = ALIGN (0x4)
                 0x20002098                __bss_start__ = .
  *(.bss*)
@@ -9123,7 +9123,7 @@ OUTPUT(_build/nrf51422_xxac.out elf32-littlearm)
  .debug_macro   0x0000adaa       0x40 _build/nrf51422_xxac_softdevice_handler.c.o
  .debug_macro   0x0000adea       0x10 _build/nrf51422_xxac_softdevice_handler.c.o
 
-.debug_line     0x00000000    0x220eb
+.debug_line     0x00000000    0x220de
  .debug_line    0x00000000      0x6c5 _build/nrf51422_xxac_app_error.c.o
  .debug_line    0x000006c5      0x5fa _build/nrf51422_xxac_app_error_weak.c.o
  .debug_line    0x00000cbf     0x137d _build/nrf51422_xxac_app_timer.c.o
@@ -9144,31 +9144,31 @@ OUTPUT(_build/nrf51422_xxac.out elf32-littlearm)
  .debug_line    0x0000e497      0xc48 _build/nrf51422_xxac_bsp.c.o
  .debug_line    0x0000f0df      0x81c _build/nrf51422_xxac_bsp_btn_ble.c.o
  .debug_line    0x0000f8fb      0x701 _build/nrf51422_xxac_main.c.o
- .debug_line    0x0000fffc     0x16b5 _build/nrf51422_xxac_ble_interface.c.o
- .debug_line    0x000116b1      0xdf3 _build/nrf51422_xxac_ble_advdata.c.o
- .debug_line    0x000124a4      0xe9e _build/nrf51422_xxac_ble_advertising.c.o
- .debug_line    0x00013342      0xa19 _build/nrf51422_xxac_ble_conn_params.c.o
- .debug_line    0x00013d5b      0xa1c _build/nrf51422_xxac_ble_conn_state.c.o
- .debug_line    0x00014777      0x8fe _build/nrf51422_xxac_ble_srv_common.c.o
- .debug_line    0x00015075      0xd70 _build/nrf51422_xxac_gatt_cache_manager.c.o
- .debug_line    0x00015de5      0xaec _build/nrf51422_xxac_gatts_cache_manager.c.o
- .debug_line    0x000168d1     0x127f _build/nrf51422_xxac_id_manager.c.o
- .debug_line    0x00017b50      0x6b5 _build/nrf51422_xxac_nrf_ble_gatt.c.o
- .debug_line    0x00018205      0xfee _build/nrf51422_xxac_peer_data_storage.c.o
- .debug_line    0x000191f3     0x1104 _build/nrf51422_xxac_peer_database.c.o
- .debug_line    0x0001a2f7      0x910 _build/nrf51422_xxac_peer_id.c.o
- .debug_line    0x0001ac07     0x174b _build/nrf51422_xxac_peer_manager.c.o
- .debug_line    0x0001c352      0x666 _build/nrf51422_xxac_pm_buffer.c.o
- .debug_line    0x0001c9b8      0x792 _build/nrf51422_xxac_pm_mutex.c.o
- .debug_line    0x0001d14a     0x10de _build/nrf51422_xxac_security_dispatcher.c.o
- .debug_line    0x0001e228      0xd4d _build/nrf51422_xxac_security_manager.c.o
- .debug_line    0x0001ef75      0x4e1 _build/nrf51422_xxac_system_nrf51.c.o
- .debug_line    0x0001f456      0x92d _build/nrf51422_xxac_ble_bas.c.o
- .debug_line    0x0001fd83      0x9c5 _build/nrf51422_xxac_ble_dis.c.o
- .debug_line    0x00020748      0xce3 _build/nrf51422_xxac_ble_hrs.c.o
- .debug_line    0x0002142b      0xcc0 _build/nrf51422_xxac_softdevice_handler.c.o
+ .debug_line    0x0000fffc     0x16b4 _build/nrf51422_xxac_ble_interface.c.o
+ .debug_line    0x000116b0      0xdf3 _build/nrf51422_xxac_ble_advdata.c.o
+ .debug_line    0x000124a3      0xe9e _build/nrf51422_xxac_ble_advertising.c.o
+ .debug_line    0x00013341      0xa19 _build/nrf51422_xxac_ble_conn_params.c.o
+ .debug_line    0x00013d5a      0xa1c _build/nrf51422_xxac_ble_conn_state.c.o
+ .debug_line    0x00014776      0x8fe _build/nrf51422_xxac_ble_srv_common.c.o
+ .debug_line    0x00015074      0xd70 _build/nrf51422_xxac_gatt_cache_manager.c.o
+ .debug_line    0x00015de4      0xaec _build/nrf51422_xxac_gatts_cache_manager.c.o
+ .debug_line    0x000168d0     0x127f _build/nrf51422_xxac_id_manager.c.o
+ .debug_line    0x00017b4f      0x6b5 _build/nrf51422_xxac_nrf_ble_gatt.c.o
+ .debug_line    0x00018204      0xfee _build/nrf51422_xxac_peer_data_storage.c.o
+ .debug_line    0x000191f2     0x1104 _build/nrf51422_xxac_peer_database.c.o
+ .debug_line    0x0001a2f6      0x910 _build/nrf51422_xxac_peer_id.c.o
+ .debug_line    0x0001ac06     0x174b _build/nrf51422_xxac_peer_manager.c.o
+ .debug_line    0x0001c351      0x666 _build/nrf51422_xxac_pm_buffer.c.o
+ .debug_line    0x0001c9b7      0x792 _build/nrf51422_xxac_pm_mutex.c.o
+ .debug_line    0x0001d149     0x10de _build/nrf51422_xxac_security_dispatcher.c.o
+ .debug_line    0x0001e227      0xd4d _build/nrf51422_xxac_security_manager.c.o
+ .debug_line    0x0001ef74      0x4e1 _build/nrf51422_xxac_system_nrf51.c.o
+ .debug_line    0x0001f455      0x921 _build/nrf51422_xxac_ble_bas.c.o
+ .debug_line    0x0001fd76      0x9c5 _build/nrf51422_xxac_ble_dis.c.o
+ .debug_line    0x0002073b      0xce3 _build/nrf51422_xxac_ble_hrs.c.o
+ .debug_line    0x0002141e      0xcc0 _build/nrf51422_xxac_softdevice_handler.c.o
 
-.debug_str      0x00000000    0x4fd9d
+.debug_str      0x00000000    0x4fd9c
  .debug_str     0x00000000    0x34734 _build/nrf51422_xxac_app_error.c.o
                               0x34a44 (size before relaxing)
  .debug_str     0x00034734       0x9c _build/nrf51422_xxac_app_error_weak.c.o
@@ -9209,49 +9209,49 @@ OUTPUT(_build/nrf51422_xxac.out elf32-littlearm)
                               0x364e0 (size before relaxing)
  .debug_str     0x00043e12       0xbf _build/nrf51422_xxac_main.c.o
                               0x35446 (size before relaxing)
- .debug_str     0x00043ed1     0x6188 _build/nrf51422_xxac_ble_interface.c.o
-                              0x42ab2 (size before relaxing)
- .debug_str     0x0004a059      0x37b _build/nrf51422_xxac_ble_advdata.c.o
+ .debug_str     0x00043ed1     0x6187 _build/nrf51422_xxac_ble_interface.c.o
+                              0x42ab1 (size before relaxing)
+ .debug_str     0x0004a058      0x37b _build/nrf51422_xxac_ble_advdata.c.o
                               0x38426 (size before relaxing)
- .debug_str     0x0004a3d4      0x484 _build/nrf51422_xxac_ble_advertising.c.o
+ .debug_str     0x0004a3d3      0x484 _build/nrf51422_xxac_ble_advertising.c.o
                               0x3a49d (size before relaxing)
- .debug_str     0x0004a858      0x1d5 _build/nrf51422_xxac_ble_conn_params.c.o
+ .debug_str     0x0004a857      0x1d5 _build/nrf51422_xxac_ble_conn_params.c.o
                               0x39923 (size before relaxing)
- .debug_str     0x0004aa2d      0x6e2 _build/nrf51422_xxac_ble_conn_state.c.o
+ .debug_str     0x0004aa2c      0x6e2 _build/nrf51422_xxac_ble_conn_state.c.o
                               0x380e5 (size before relaxing)
- .debug_str     0x0004b10f      0x3ed _build/nrf51422_xxac_ble_srv_common.c.o
+ .debug_str     0x0004b10e      0x3ed _build/nrf51422_xxac_ble_srv_common.c.o
                               0x38343 (size before relaxing)
- .debug_str     0x0004b4fc      0xb4e _build/nrf51422_xxac_gatt_cache_manager.c.o
+ .debug_str     0x0004b4fb      0xb4e _build/nrf51422_xxac_gatt_cache_manager.c.o
                               0x39e6b (size before relaxing)
- .debug_str     0x0004c04a      0x6b2 _build/nrf51422_xxac_gatts_cache_manager.c.o
+ .debug_str     0x0004c049      0x6b2 _build/nrf51422_xxac_gatts_cache_manager.c.o
                               0x38ee4 (size before relaxing)
- .debug_str     0x0004c6fc      0xa8f _build/nrf51422_xxac_id_manager.c.o
+ .debug_str     0x0004c6fb      0xa8f _build/nrf51422_xxac_id_manager.c.o
                               0x3acbd (size before relaxing)
- .debug_str     0x0004d18b       0xb0 _build/nrf51422_xxac_nrf_ble_gatt.c.o
+ .debug_str     0x0004d18a       0xb0 _build/nrf51422_xxac_nrf_ble_gatt.c.o
                               0x3a2a9 (size before relaxing)
- .debug_str     0x0004d23b      0x565 _build/nrf51422_xxac_peer_data_storage.c.o
+ .debug_str     0x0004d23a      0x565 _build/nrf51422_xxac_peer_data_storage.c.o
                               0x39320 (size before relaxing)
- .debug_str     0x0004d7a0      0x641 _build/nrf51422_xxac_peer_database.c.o
+ .debug_str     0x0004d79f      0x641 _build/nrf51422_xxac_peer_database.c.o
                               0x393d2 (size before relaxing)
- .debug_str     0x0004dde1      0x117 _build/nrf51422_xxac_peer_id.c.o
+ .debug_str     0x0004dde0      0x117 _build/nrf51422_xxac_peer_id.c.o
                               0x381da (size before relaxing)
- .debug_str     0x0004def8      0xa3e _build/nrf51422_xxac_peer_manager.c.o
+ .debug_str     0x0004def7      0xa3e _build/nrf51422_xxac_peer_manager.c.o
                               0x3ad5b (size before relaxing)
- .debug_str     0x0004e936       0xdd _build/nrf51422_xxac_pm_buffer.c.o
+ .debug_str     0x0004e935       0xdd _build/nrf51422_xxac_pm_buffer.c.o
                               0x32ad8 (size before relaxing)
- .debug_str     0x0004ea13       0x5e _build/nrf51422_xxac_pm_mutex.c.o
+ .debug_str     0x0004ea12       0x5e _build/nrf51422_xxac_pm_mutex.c.o
                               0x33cf3 (size before relaxing)
- .debug_str     0x0004ea71      0x446 _build/nrf51422_xxac_security_dispatcher.c.o
+ .debug_str     0x0004ea70      0x446 _build/nrf51422_xxac_security_dispatcher.c.o
                               0x3a5a4 (size before relaxing)
- .debug_str     0x0004eeb7      0x29f _build/nrf51422_xxac_security_manager.c.o
+ .debug_str     0x0004eeb6      0x29f _build/nrf51422_xxac_security_manager.c.o
                               0x39ef8 (size before relaxing)
- .debug_str     0x0004f156      0x10e _build/nrf51422_xxac_system_nrf51.c.o
+ .debug_str     0x0004f155      0x10e _build/nrf51422_xxac_system_nrf51.c.o
                               0x2aaf0 (size before relaxing)
- .debug_str     0x0004f264      0x125 _build/nrf51422_xxac_ble_bas.c.o
+ .debug_str     0x0004f263      0x125 _build/nrf51422_xxac_ble_bas.c.o
                               0x38b6a (size before relaxing)
- .debug_str     0x0004f389      0x154 _build/nrf51422_xxac_ble_dis.c.o
+ .debug_str     0x0004f388      0x154 _build/nrf51422_xxac_ble_dis.c.o
                               0x3879b (size before relaxing)
- .debug_str     0x0004f4dd      0x31a _build/nrf51422_xxac_ble_hrs.c.o
+ .debug_str     0x0004f4dc      0x31a _build/nrf51422_xxac_ble_hrs.c.o
                               0x3a86a (size before relaxing)
- .debug_str     0x0004f7f7      0x5a6 _build/nrf51422_xxac_softdevice_handler.c.o
+ .debug_str     0x0004f7f6      0x5a6 _build/nrf51422_xxac_softdevice_handler.c.o
                               0x3c597 (size before relaxing)

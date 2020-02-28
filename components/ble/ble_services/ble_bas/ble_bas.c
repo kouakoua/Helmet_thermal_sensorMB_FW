@@ -295,8 +295,8 @@ uint32_t ble_bas_battery_level_update(ble_bas_t * p_bas, uint8_t battery_level)
     uint32_t err_code = NRF_SUCCESS;
     ble_gatts_value_t gatts_value;
 
-    if (battery_level != p_bas->battery_level_last)
-    {
+    //if (battery_level != p_bas->battery_level_last)
+    //{
         // Initialize value struct.
         memset(&gatts_value, 0, sizeof(gatts_value));
 
@@ -337,7 +337,7 @@ uint32_t ble_bas_battery_level_update(ble_bas_t * p_bas, uint8_t battery_level)
         {
             err_code = NRF_ERROR_INVALID_STATE;
         }
-    }
+  //  }
 
     return err_code;
 }

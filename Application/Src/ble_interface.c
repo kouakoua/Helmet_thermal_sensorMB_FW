@@ -97,7 +97,7 @@
 #define APP_TIMER_PRESCALER              0                                           /**< Value of the RTC1 PRESCALER register. */
 #define APP_TIMER_OP_QUEUE_SIZE          4                                           /**< Size of timer operation queues. */
 
-#define BATTERY_LEVEL_MEAS_INTERVAL      APP_TIMER_TICKS(5000, APP_TIMER_PRESCALER)  /**< Battery level measurement interval (ticks). */
+#define BATTERY_LEVEL_MEAS_INTERVAL      APP_TIMER_TICKS(200, APP_TIMER_PRESCALER)  /**< Battery level measurement interval (ticks). */
 
 
 #define HEART_RATE_MEAS_INTERVAL         APP_TIMER_TICKS(500, APP_TIMER_PRESCALER)  /**< Heart rate measurement interval (ticks). */
@@ -334,7 +334,7 @@ static void battery_level_update(void)
 static void battery_level_meas_timeout_handler(void * p_context)
 {
 	//NRF_LOG_INFO("6 ");
-    UNUSED_PARAMETER(p_context);
+  //  UNUSED_PARAMETER(p_context);
     battery_level_update();
 }
 /*

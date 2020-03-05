@@ -42,11 +42,12 @@ _build/nrf51422_xxac_bsp_btn.c.o: Drivers/BSP/Src/bsp_btn.c \
  components/libraries/log/nrf_log_ctrl.h \
  components/libraries/util/sdk_errors.h \
  components/libraries/log/src/nrf_log_ctrl_internal.h \
- Drivers/BSP/Inc/bsp_btn.h Drivers/CPT/Inc/cpt_btn.h \
- Drivers/HAL/Inc/nrf_drv_gpiote.h components/drivers_nrf/hal/nrf_gpiote.h \
- components/drivers_nrf/hal/nrf_peripherals.h \
- components/device/nrf51422_peripherals.h \
- components/drivers_nrf/hal/nrf_gpio.h \
+ components/libraries/util/app_util_platform.h \
+ components/softdevice/s130/headers/nrf_soc.h \
+ components/softdevice/s130/headers/nrf_svc.h \
+ components/softdevice/s130/headers/nrf_error_soc.h \
+ components/softdevice/s130/headers/nrf_error.h \
+ components/softdevice/s130/headers/nrf_nvic.h \
  components/libraries/util/nrf_assert.h \
  components/libraries/util/app_error.h \
  c:\program\ files\ (x86)\gnu\ tools\ arm\ embedded\8\ 2019-q3-update\arm-none-eabi\include\stdio.h \
@@ -55,17 +56,16 @@ _build/nrf51422_xxac_bsp_btn.c.o: Drivers/BSP/Src/bsp_btn.c \
  c:\program\ files\ (x86)\gnu\ tools\ arm\ embedded\8\ 2019-q3-update\arm-none-eabi\include\sys\_pthreadtypes.h \
  c:\program\ files\ (x86)\gnu\ tools\ arm\ embedded\8\ 2019-q3-update\arm-none-eabi\include\machine\types.h \
  c:\program\ files\ (x86)\gnu\ tools\ arm\ embedded\8\ 2019-q3-update\arm-none-eabi\include\sys\stdio.h \
- components/libraries/util/app_error_weak.h \
+ components/libraries/util/app_error_weak.h Drivers/BSP/Inc/bsp_btn.h \
+ Drivers/CPT/Inc/cpt_btn.h Drivers/HAL/Inc/nrf_drv_gpiote.h \
+ components/drivers_nrf/hal/nrf_gpiote.h \
+ components/drivers_nrf/hal/nrf_peripherals.h \
+ components/device/nrf51422_peripherals.h \
+ components/drivers_nrf/hal/nrf_gpio.h \
+ components/libraries/util/nrf_assert.h \
  c:\program\ files\ (x86)\gnu\ tools\ arm\ embedded\8\ 2019-q3-update\arm-none-eabi\include\stdlib.h \
  c:\program\ files\ (x86)\gnu\ tools\ arm\ embedded\8\ 2019-q3-update\arm-none-eabi\include\machine\stdlib.h \
- external/segger_rtt/SEGGER_RTT.h external/segger_rtt/SEGGER_RTT_Conf.h \
- components/libraries/util/app_util_platform.h \
- components/softdevice/s130/headers/nrf_soc.h \
- components/softdevice/s130/headers/nrf_svc.h \
- components/softdevice/s130/headers/nrf_error_soc.h \
- components/softdevice/s130/headers/nrf_error.h \
- components/softdevice/s130/headers/nrf_nvic.h \
- components/libraries/util/nrf_assert.h
+ external/segger_rtt/SEGGER_RTT.h external/segger_rtt/SEGGER_RTT_Conf.h
 
 components/libraries/log/nrf_log.h:
 
@@ -159,19 +159,17 @@ components/libraries/util/sdk_errors.h:
 
 components/libraries/log/src/nrf_log_ctrl_internal.h:
 
-Drivers/BSP/Inc/bsp_btn.h:
+components/libraries/util/app_util_platform.h:
 
-Drivers/CPT/Inc/cpt_btn.h:
+components/softdevice/s130/headers/nrf_soc.h:
 
-Drivers/HAL/Inc/nrf_drv_gpiote.h:
+components/softdevice/s130/headers/nrf_svc.h:
 
-components/drivers_nrf/hal/nrf_gpiote.h:
+components/softdevice/s130/headers/nrf_error_soc.h:
 
-components/drivers_nrf/hal/nrf_peripherals.h:
+components/softdevice/s130/headers/nrf_error.h:
 
-components/device/nrf51422_peripherals.h:
-
-components/drivers_nrf/hal/nrf_gpio.h:
+components/softdevice/s130/headers/nrf_nvic.h:
 
 components/libraries/util/nrf_assert.h:
 
@@ -191,6 +189,22 @@ c:\program\ files\ (x86)\gnu\ tools\ arm\ embedded\8\ 2019-q3-update\arm-none-ea
 
 components/libraries/util/app_error_weak.h:
 
+Drivers/BSP/Inc/bsp_btn.h:
+
+Drivers/CPT/Inc/cpt_btn.h:
+
+Drivers/HAL/Inc/nrf_drv_gpiote.h:
+
+components/drivers_nrf/hal/nrf_gpiote.h:
+
+components/drivers_nrf/hal/nrf_peripherals.h:
+
+components/device/nrf51422_peripherals.h:
+
+components/drivers_nrf/hal/nrf_gpio.h:
+
+components/libraries/util/nrf_assert.h:
+
 c:\program\ files\ (x86)\gnu\ tools\ arm\ embedded\8\ 2019-q3-update\arm-none-eabi\include\stdlib.h:
 
 c:\program\ files\ (x86)\gnu\ tools\ arm\ embedded\8\ 2019-q3-update\arm-none-eabi\include\machine\stdlib.h:
@@ -198,17 +212,3 @@ c:\program\ files\ (x86)\gnu\ tools\ arm\ embedded\8\ 2019-q3-update\arm-none-ea
 external/segger_rtt/SEGGER_RTT.h:
 
 external/segger_rtt/SEGGER_RTT_Conf.h:
-
-components/libraries/util/app_util_platform.h:
-
-components/softdevice/s130/headers/nrf_soc.h:
-
-components/softdevice/s130/headers/nrf_svc.h:
-
-components/softdevice/s130/headers/nrf_error_soc.h:
-
-components/softdevice/s130/headers/nrf_error.h:
-
-components/softdevice/s130/headers/nrf_nvic.h:
-
-components/libraries/util/nrf_assert.h:

@@ -42,11 +42,12 @@ _build/nrf51422_xxac_cpt_btn.c.o: Drivers/CPT/Src/cpt_btn.c \
  components/libraries/log/nrf_log_ctrl.h \
  components/libraries/util/sdk_errors.h \
  components/libraries/log/src/nrf_log_ctrl_internal.h \
- Drivers/CPT/Inc/cpt_btn.h Drivers/HAL/Inc/nrf_drv_gpiote.h \
- components/drivers_nrf/hal/nrf_gpiote.h \
- components/drivers_nrf/hal/nrf_peripherals.h \
- components/device/nrf51422_peripherals.h \
- components/drivers_nrf/hal/nrf_gpio.h \
+ components/libraries/util/app_util_platform.h \
+ components/softdevice/s130/headers/nrf_soc.h \
+ components/softdevice/s130/headers/nrf_svc.h \
+ components/softdevice/s130/headers/nrf_error_soc.h \
+ components/softdevice/s130/headers/nrf_error.h \
+ components/softdevice/s130/headers/nrf_nvic.h \
  components/libraries/util/nrf_assert.h \
  components/libraries/util/app_error.h \
  c:\program\ files\ (x86)\gnu\ tools\ arm\ embedded\8\ 2019-q3-update\arm-none-eabi\include\stdio.h \
@@ -55,13 +56,15 @@ _build/nrf51422_xxac_cpt_btn.c.o: Drivers/CPT/Src/cpt_btn.c \
  c:\program\ files\ (x86)\gnu\ tools\ arm\ embedded\8\ 2019-q3-update\arm-none-eabi\include\sys\_pthreadtypes.h \
  c:\program\ files\ (x86)\gnu\ tools\ arm\ embedded\8\ 2019-q3-update\arm-none-eabi\include\machine\types.h \
  c:\program\ files\ (x86)\gnu\ tools\ arm\ embedded\8\ 2019-q3-update\arm-none-eabi\include\sys\stdio.h \
- components/libraries/util/app_error_weak.h \
+ components/libraries/util/app_error_weak.h Drivers/CPT/Inc/cpt_btn.h \
+ Drivers/HAL/Inc/nrf_drv_gpiote.h components/drivers_nrf/hal/nrf_gpiote.h \
+ components/drivers_nrf/hal/nrf_peripherals.h \
+ components/device/nrf51422_peripherals.h \
+ components/drivers_nrf/hal/nrf_gpio.h \
+ components/libraries/util/nrf_assert.h \
  c:\program\ files\ (x86)\gnu\ tools\ arm\ embedded\8\ 2019-q3-update\arm-none-eabi\include\stdlib.h \
  c:\program\ files\ (x86)\gnu\ tools\ arm\ embedded\8\ 2019-q3-update\arm-none-eabi\include\machine\stdlib.h \
- Application/Inc/ble_interface.h \
- components/softdevice/s130/headers/nrf_nvic.h \
- components/softdevice/s130/headers/nrf_error_soc.h \
- components/softdevice/s130/headers/nrf_error.h
+ Application/Inc/ble_interface.h
 
 components/libraries/log/nrf_log.h:
 
@@ -155,17 +158,17 @@ components/libraries/util/sdk_errors.h:
 
 components/libraries/log/src/nrf_log_ctrl_internal.h:
 
-Drivers/CPT/Inc/cpt_btn.h:
+components/libraries/util/app_util_platform.h:
 
-Drivers/HAL/Inc/nrf_drv_gpiote.h:
+components/softdevice/s130/headers/nrf_soc.h:
 
-components/drivers_nrf/hal/nrf_gpiote.h:
+components/softdevice/s130/headers/nrf_svc.h:
 
-components/drivers_nrf/hal/nrf_peripherals.h:
+components/softdevice/s130/headers/nrf_error_soc.h:
 
-components/device/nrf51422_peripherals.h:
+components/softdevice/s130/headers/nrf_error.h:
 
-components/drivers_nrf/hal/nrf_gpio.h:
+components/softdevice/s130/headers/nrf_nvic.h:
 
 components/libraries/util/nrf_assert.h:
 
@@ -185,14 +188,22 @@ c:\program\ files\ (x86)\gnu\ tools\ arm\ embedded\8\ 2019-q3-update\arm-none-ea
 
 components/libraries/util/app_error_weak.h:
 
+Drivers/CPT/Inc/cpt_btn.h:
+
+Drivers/HAL/Inc/nrf_drv_gpiote.h:
+
+components/drivers_nrf/hal/nrf_gpiote.h:
+
+components/drivers_nrf/hal/nrf_peripherals.h:
+
+components/device/nrf51422_peripherals.h:
+
+components/drivers_nrf/hal/nrf_gpio.h:
+
+components/libraries/util/nrf_assert.h:
+
 c:\program\ files\ (x86)\gnu\ tools\ arm\ embedded\8\ 2019-q3-update\arm-none-eabi\include\stdlib.h:
 
 c:\program\ files\ (x86)\gnu\ tools\ arm\ embedded\8\ 2019-q3-update\arm-none-eabi\include\machine\stdlib.h:
 
 Application/Inc/ble_interface.h:
-
-components/softdevice/s130/headers/nrf_nvic.h:
-
-components/softdevice/s130/headers/nrf_error_soc.h:
-
-components/softdevice/s130/headers/nrf_error.h:

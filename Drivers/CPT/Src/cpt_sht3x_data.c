@@ -65,7 +65,7 @@ void twi_handler(nrf_drv_twi_evt_t const * p_event, void * p_context)
             	m_xfer_done = false;
                  nrf_delay_ms(20);
             	 err_code = nrf_drv_twi_rx(&m_twi_sht3x, ADDR_A, (uint8_t*)&m_sample, sizeof(m_sample));
-            	// NRF_LOG_INFO("ERR: %d\n",err_code);
+            	 NRF_LOG_INFO("ERR: %d\n",err_code);
 
 
             }
@@ -87,7 +87,7 @@ void twi_handler(nrf_drv_twi_evt_t const * p_event, void * p_context)
                                break;
                            case NRF_DRV_TWI_XFER_RX:
                         	   m_xfer_done = true;
-                        	//   NRF_LOG_INFO("Received Sensor Data");
+                        	   NRF_LOG_INFO("Received Sensor Data");
                                break;
                            case NRF_DRV_TWI_XFER_TXRX:
                         	   m_xfer_done = true;
@@ -152,7 +152,7 @@ void sht3x_set_mode(uint8_t Address, uint8_t MSB, uint8_t LSB)
     reg[1] = LSB;
   init =false;
   err_code = nrf_drv_twi_tx(&m_twi_sht3x, Address, reg, sizeof(reg), false);
- // NRF_LOG_INFO("tRANSERROR: %d\n",err_code);
+  NRF_LOG_INFO("tRANSERROR: %d\n",err_code);
   m_xfer_done = false;
 }
 
@@ -170,7 +170,7 @@ void sht3x_set_SENSOR(uint8_t Address, uint8_t MSB)
   err_code = nrf_drv_twi_tx(&m_twi_sht3x, Address, reg, sizeof(reg), false);
   APP_ERROR_CHECK(err_code);
   m_xfer_done = false;
-//  NRF_LOG_INFO("tRANSERRORint: %d\n",err_code);
+  NRF_LOG_INFO("tRANSERRORint: %d\n",err_code);
 }
 
 

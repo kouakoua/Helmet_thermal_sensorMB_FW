@@ -58,6 +58,13 @@ _build/nrf51422_xxac_main.c.o: Application/Src/main.c \
  components/libraries/util/app_util.h \
  components/libraries/log/nrf_log_ctrl.h \
  components/libraries/log/src/nrf_log_ctrl_internal.h \
+ components/libraries/util/app_util_platform.h \
+ components/softdevice/s130/headers/nrf_soc.h \
+ components/softdevice/s130/headers/nrf_svc.h \
+ components/softdevice/s130/headers/nrf_error_soc.h \
+ components/softdevice/s130/headers/nrf_error.h \
+ components/softdevice/s130/headers/nrf_nvic.h \
+ components/libraries/util/nrf_assert.h \
  components/libraries/log/nrf_log_backend.h \
  components/libraries/log/nrf_log_ctrl.h
 
@@ -192,6 +199,20 @@ components/libraries/util/app_util.h:
 components/libraries/log/nrf_log_ctrl.h:
 
 components/libraries/log/src/nrf_log_ctrl_internal.h:
+
+components/libraries/util/app_util_platform.h:
+
+components/softdevice/s130/headers/nrf_soc.h:
+
+components/softdevice/s130/headers/nrf_svc.h:
+
+components/softdevice/s130/headers/nrf_error_soc.h:
+
+components/softdevice/s130/headers/nrf_error.h:
+
+components/softdevice/s130/headers/nrf_nvic.h:
+
+components/libraries/util/nrf_assert.h:
 
 components/libraries/log/nrf_log_backend.h:
 

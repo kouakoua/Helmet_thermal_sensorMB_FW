@@ -61,6 +61,19 @@ _build/nrf51422_xxac_ble_hrs.c.o: \
  components/libraries/log/src/nrf_log_internal.h \
  components/libraries/log/nrf_log_ctrl.h \
  components/libraries/log/src/nrf_log_ctrl_internal.h \
+ components/libraries/util/app_util_platform.h \
+ components/softdevice/s130/headers/nrf_soc.h \
+ components/softdevice/s130/headers/nrf_error_soc.h \
+ components/softdevice/s130/headers/nrf_nvic.h \
+ components/libraries/util/nrf_assert.h \
+ components/libraries/util/app_error.h \
+ c:\program\ files\ (x86)\gnu\ tools\ arm\ embedded\8\ 2019-q3-update\arm-none-eabi\include\stdio.h \
+ c:\program\ files\ (x86)\gnu\ tools\ arm\ embedded\8\ 2019-q3-update\lib\gcc\arm-none-eabi\8.3.1\include\stdarg.h \
+ c:\program\ files\ (x86)\gnu\ tools\ arm\ embedded\8\ 2019-q3-update\arm-none-eabi\include\sys\types.h \
+ c:\program\ files\ (x86)\gnu\ tools\ arm\ embedded\8\ 2019-q3-update\arm-none-eabi\include\sys\_pthreadtypes.h \
+ c:\program\ files\ (x86)\gnu\ tools\ arm\ embedded\8\ 2019-q3-update\arm-none-eabi\include\machine\types.h \
+ c:\program\ files\ (x86)\gnu\ tools\ arm\ embedded\8\ 2019-q3-update\arm-none-eabi\include\sys\stdio.h \
+ components/libraries/util/app_error_weak.h \
  components/libraries/log/nrf_log_backend.h \
  components/libraries/log/nrf_log_ctrl.h
 
@@ -191,6 +204,32 @@ components/libraries/log/src/nrf_log_internal.h:
 components/libraries/log/nrf_log_ctrl.h:
 
 components/libraries/log/src/nrf_log_ctrl_internal.h:
+
+components/libraries/util/app_util_platform.h:
+
+components/softdevice/s130/headers/nrf_soc.h:
+
+components/softdevice/s130/headers/nrf_error_soc.h:
+
+components/softdevice/s130/headers/nrf_nvic.h:
+
+components/libraries/util/nrf_assert.h:
+
+components/libraries/util/app_error.h:
+
+c:\program\ files\ (x86)\gnu\ tools\ arm\ embedded\8\ 2019-q3-update\arm-none-eabi\include\stdio.h:
+
+c:\program\ files\ (x86)\gnu\ tools\ arm\ embedded\8\ 2019-q3-update\lib\gcc\arm-none-eabi\8.3.1\include\stdarg.h:
+
+c:\program\ files\ (x86)\gnu\ tools\ arm\ embedded\8\ 2019-q3-update\arm-none-eabi\include\sys\types.h:
+
+c:\program\ files\ (x86)\gnu\ tools\ arm\ embedded\8\ 2019-q3-update\arm-none-eabi\include\sys\_pthreadtypes.h:
+
+c:\program\ files\ (x86)\gnu\ tools\ arm\ embedded\8\ 2019-q3-update\arm-none-eabi\include\machine\types.h:
+
+c:\program\ files\ (x86)\gnu\ tools\ arm\ embedded\8\ 2019-q3-update\arm-none-eabi\include\sys\stdio.h:
+
+components/libraries/util/app_error_weak.h:
 
 components/libraries/log/nrf_log_backend.h:
 

@@ -310,7 +310,7 @@ static void battery_level_update(void)
     uint32_t err_code;
     int8_t  battery_level;
     battery_level = (uint8_t)((bsp_adc_Config())/4);
-   // NRF_LOG_INFO("Bat vOLT %d\n",bsp_adc_Config());
+   NRF_LOG_INFO("Bat vOLT %d\n",bsp_adc_Config());
     		//(uint8_t)sensorsim_measure(&m_battery_sim_state, &m_battery_sim_cfg);
     err_code = ble_bas_battery_level_update(&m_bas, battery_level);
     if ((err_code != NRF_SUCCESS) &&
